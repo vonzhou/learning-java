@@ -1,8 +1,6 @@
-package ibmdw.nio;// $Id$
+package nio.ibmdw;// $Id$
 
-import java.io.*;
 import java.nio.*;
-import java.nio.channels.*;
 
 public class CreateArrayBuffer
 {
