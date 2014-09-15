@@ -1,4 +1,4 @@
-package jenkov.concurrent;
+package jenkov.juc;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

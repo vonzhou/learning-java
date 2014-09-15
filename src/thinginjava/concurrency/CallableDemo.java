@@ -1,4 +1,4 @@
-package basic.juc;
+package thinginjava.concurrency;
 
 import java.util.ArrayList;
 import java.util.concurrent.Callable;

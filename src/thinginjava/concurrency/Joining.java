@@ -1,4 +1,4 @@
-package basic.juc;
+package thinginjava.concurrency;
 
 class Sleeper extends Thread {
 	private int duration;

@@ -1,4 +1,4 @@
-package basic.juc;
+package thinginjava.concurrency;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;

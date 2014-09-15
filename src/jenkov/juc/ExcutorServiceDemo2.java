@@ -1,14 +1,13 @@
-package jenkov.concurrent;
+package jenkov.juc;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
-public class ExcutorServiceDemo3 {
+public class ExcutorServiceDemo2 {
 	public static void main(String[] args) {
 		ExecutorService executorService = Executors.newSingleThreadExecutor();
 
@@ -30,15 +29,17 @@ public class ExcutorServiceDemo3 {
 		    }
 		});
 
-		List<Future<String>> futures = null;
+		String result = "";
 		try {
-			futures = executorService.invokeAll(callables);
-			for(Future<String> future : futures){
-			    System.out.println("future.get = " + future.get());
-			}
-		} catch (Exception e) {
+			//任何一个任务执行完成或失败，invokeAny都会返回
+			result = executorService.invokeAny(callables);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}
+
+		System.out.println("result = " + result);
 
 		executorService.shutdown();
 	}

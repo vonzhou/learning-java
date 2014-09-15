@@ -1,4 +1,4 @@
-package basic.juc;
+package thinginjava.concurrency;
 
 public class MainThread {
 	public static void main(String[] args) {

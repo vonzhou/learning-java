@@ -1,4 +1,4 @@
-package basic.juc;
+package thinginjava.concurrency;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
