@@ -1,4 +1,4 @@
-package ibmdw.nio;// $Id$
+package thinkinginjava.nio.ibmdw;// $Id$
 
 import java.io.*;
 import java.nio.*;

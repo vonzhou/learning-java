@@ -1,6 +1,6 @@
-package leetcode;
+package oj.leetcode;
 
-public class ReverseString {
+public class ReverseString2 {
 
 	public String reverseWords(String s) {
 		s = s.trim(); // imit the head and tail blanks
@@ -48,7 +48,7 @@ public class ReverseString {
 	}
 
 	public static void main(String[] args) {
-		ReverseString rs = new ReverseString();
+		ReverseString2 rs = new ReverseString2();
 		System.out.println(rs.reverseWords("    von   zho    "));
 	}
 

@@ -1,4 +1,4 @@
-package nio.ibmdw;
+package thinkinginjava.nio.ibmdw;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

@@ -23,11 +23,23 @@ public class Sequence {
     public Object current() { return items[i]; }
     public void next() { if(i < items.length) i++; }
   }
+  //内部类的灵活性
+  private class SequenceReverseSelector implements Selector {
+	    private int i = items.length - 1;
+	    public boolean end() { return i == 0; }
+	    public Object current() { return items[i]; }
+	    public void next() { if(i >= 0) i--; }
+	  }
   
   //
   public Selector selector() {
     return new SequenceSelector();
   }	
+  
+  public Selector reverseSelector() {
+	    return new SequenceReverseSelector();
+  }	
+  
   public static void main(String[] args) {
     Sequence sequence = new Sequence(10);
     for(int i = 0; i < 10; i++)
@@ -36,6 +48,13 @@ public class Sequence {
     while(!selector.end()) {
       System.out.print(selector.current() + " ");
       selector.next();
+    }
+    System.out.println();
+    
+    Selector selector2 = sequence.reverseSelector();
+    while(!selector2.end()) {
+      System.out.print(selector2.current() + " ");
+      selector2.next();
     }
   }
 }

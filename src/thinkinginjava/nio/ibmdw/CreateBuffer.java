@@ -1,4 +1,4 @@
-package nio.ibmdw;// $Id$
+package thinkinginjava.nio.ibmdw;// $Id$
 
 import java.nio.ByteBuffer;
 

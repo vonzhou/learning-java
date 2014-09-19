@@ -1,4 +1,4 @@
-package ibmdw.nio.buffer;
+package thinkinginjava.nio.ibmdw;
 
 import java.nio.*;
 
@@ -8,7 +8,7 @@ import java.nio.*;
  */
 public class UseFloatBuffer {
     static public void main(String args[]) throws Exception {
-        // 创建FloatBuffer，容量10,单位 float，也就是说创建的 buffer 放的下10个 float
+        // 创建FloatBuffer，容�?10,单位 float，也就是说创建的 buffer 放的�?10�? float
         FloatBuffer buffer = FloatBuffer.allocate(10);
 
         for (int i = 0; i < buffer.capacity(); ++i) {
