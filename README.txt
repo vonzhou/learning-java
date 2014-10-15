@@ -4,3 +4,4 @@
 1.《Java编程思想》学习；
 2.做leetcode oj题目；
 3.学习SAMS《Java Thread Programming》；
+4. 公开课<Algorithms, Part I >Robert Sedgewick；

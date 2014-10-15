@@ -11,6 +11,7 @@ public class Merge {
     // stably merge a[lo .. mid] with a[mid+1 ..hi] using aux[lo .. hi]
     private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
         // precondition: a[lo .. mid] and a[mid+1 .. hi] are sorted subarrays
+    	// 注意assert默认是不支持的所以 需要 java -ea XXX
         assert isSorted(a, lo, mid);
         assert isSorted(a, mid+1, hi);
 
