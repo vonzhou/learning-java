@@ -15,6 +15,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         private Value val;         // associated data
         private Node left, right;  // left and right subtrees
         private int N;             // number of nodes in subtree
+        //这样就方便了tree size的计算
 
         public Node(Key key, Value val, int N) {
             this.key = key;
@@ -77,6 +78,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         if      (cmp < 0) x.left  = put(x.left,  key, val);
         else if (cmp > 0) x.right = put(x.right, key, val);
         else              x.val   = val;
+        // 注意这里，自顶向下更新node size 
         x.N = 1 + size(x.left) + size(x.right);
         return x;
     }
