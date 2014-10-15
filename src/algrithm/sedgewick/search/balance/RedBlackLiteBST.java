@@ -2,6 +2,7 @@ package algrithm.sedgewick.search.balance;
 
 
 import algrithm.sedgewick.fundamental.programmodel.StdOut;
+import algrithm.sedgewick.stack.Queue;
 
 public class RedBlackLiteBST<Key extends Comparable<Key>, Value> {
 

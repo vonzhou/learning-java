@@ -11,16 +11,16 @@ public class SortCompare {
     public static double time(String alg, Double[] a) { 
         Stopwatch sw = new Stopwatch(); 
         if (alg.equals("Insertion"))       Insertion.sort(a); 
-        else if (alg.equals("InsertionX")) InsertionX.sort(a); 
+        //else if (alg.equals("InsertionX")) InsertionX.sort(a); 
         else if (alg.equals("Selection"))  Selection.sort(a); 
         else if (alg.equals("Shell"))      Shell.sort(a); 
-        else if (alg.equals("Merge"))      Merge.sort(a); 
-        else if (alg.equals("MergeX"))     MergeX.sort(a); 
-        else if (alg.equals("MergeBU"))    MergeBU.sort(a); 
-        else if (alg.equals("Quick"))      Quick.sort(a); 
-        else if (alg.equals("Quick3way"))  Quick3way.sort(a); 
-        else if (alg.equals("QuickX"))     QuickX.sort(a); 
-        else if (alg.equals("Heap"))       Heap.sort(a); 
+       // else if (alg.equals("Merge"))      Merge.sort(a); 
+        //else if (alg.equals("MergeX"))     MergeX.sort(a); 
+      //  else if (alg.equals("MergeBU"))    MergeBU.sort(a); 
+       // else if (alg.equals("Quick"))      Quick.sort(a); 
+       // else if (alg.equals("Quick3way"))  Quick3way.sort(a); 
+       // else if (alg.equals("QuickX"))     QuickX.sort(a); 
+       // else if (alg.equals("Heap"))       Heap.sort(a); 
         else if (alg.equals("System"))     Arrays.sort(a); 
         else throw new IllegalArgumentException("Invalid algorithm: " + alg);
         return sw.elapsedTime(); 

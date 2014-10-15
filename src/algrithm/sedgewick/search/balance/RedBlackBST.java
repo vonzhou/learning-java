@@ -1,10 +1,10 @@
 package algrithm.sedgewick.search.balance;
 
 import java.util.NoSuchElementException;
-import java.util.Queue;
 
 import algrithm.sedgewick.fundamental.programmodel.StdIn;
 import algrithm.sedgewick.fundamental.programmodel.StdOut;
+import algrithm.sedgewick.stack.Queue;
 
 public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
@@ -425,8 +425,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         return queue;
     } 
 
-    // add the keys between lo and hi in the subtree rooted at x
-    // to the queue
+    // add the keys between lo and hi in the subtree rooted at x to the queue
     private void keys(Node x, Queue<Key> queue, Key lo, Key hi) { 
         if (x == null) return; 
         int cmplo = lo.compareTo(x.key); 
@@ -437,10 +436,14 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     } 
 
     // number keys between lo and hi
+    //ld range search 范围查询
     public int size(Key lo, Key hi) {
         if (lo.compareTo(hi) > 0) return 0;
-        if (contains(hi)) return rank(hi) - rank(lo) + 1;
-        else              return rank(hi) - rank(lo);
+        if (contains(hi)) 
+        	return rank(hi) - rank(lo) + 1;
+        else              
+        	return rank(hi) - rank(lo);
+        	// 如果不包含hi的话，返回比hi小的节点个数
     }
 
 

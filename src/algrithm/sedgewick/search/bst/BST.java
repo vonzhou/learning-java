@@ -1,10 +1,10 @@
 package algrithm.sedgewick.search.bst;
 
 import java.util.NoSuchElementException;
-import java.util.Queue;
 
 import algrithm.sedgewick.fundamental.programmodel.StdIn;
 import algrithm.sedgewick.fundamental.programmodel.StdOut;
+import algrithm.sedgewick.stack.Queue;
 
 public class BST<Key extends Comparable<Key>, Value> {
     private Node root;             // root of BST

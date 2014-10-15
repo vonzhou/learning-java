@@ -1,10 +1,10 @@
 package algrithm.sedgewick.search.symboltable;
 
 import java.util.NoSuchElementException;
-import java.util.Queue;
 
 import algrithm.sedgewick.fundamental.programmodel.StdIn;
 import algrithm.sedgewick.fundamental.programmodel.StdOut;
+import algrithm.sedgewick.stack.Queue;
 
 public class BinarySearchST<Key extends Comparable<Key>, Value> {
     private static final int INIT_CAPACITY = 2;
