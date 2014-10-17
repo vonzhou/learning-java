@@ -1,4 +1,5 @@
-package oj.leetcode;
+package oj.leetcode.linklist;
+
 
 /*
  * Given a *sorted* linked list, delete all duplicates such that each element appear only once.

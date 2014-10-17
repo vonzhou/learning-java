@@ -1,4 +1,5 @@
-package oj.leetcode;
+package oj.leetcode.linklist;
+
 
 
 /*

@@ -1,4 +1,5 @@
-package oj.leetcode;
+package oj.leetcode.linklist;
+
 
 /**
  * Definition for singly-linked list. public class ListNode { int val; ListNode

@@ -1,4 +1,5 @@
-package oj.leetcode;
+package oj.leetcode.linklist;
+
 
 public class SwapNodesInPairs {
 	public static ListNode createListFromArray(int[] arr){

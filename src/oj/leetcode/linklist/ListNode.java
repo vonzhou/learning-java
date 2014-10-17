@@ -1,4 +1,4 @@
-package oj.leetcode;
+package oj.leetcode.linklist;
 
 public class ListNode {
 	int val;
