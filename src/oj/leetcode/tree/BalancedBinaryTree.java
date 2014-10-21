@@ -1,4 +1,4 @@
-package oj.leetcode;
+package oj.leetcode.tree;
 
 /*
  * Balanced Binary Tree

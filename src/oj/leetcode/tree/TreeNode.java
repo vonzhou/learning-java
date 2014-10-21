@@ -1,4 +1,4 @@
-package oj.leetcode;
+package oj.leetcode.tree;
 
 public class TreeNode {
 	int val;

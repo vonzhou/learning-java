@@ -254,14 +254,16 @@ public class BST<Key extends Comparable<Key>, Value> {
 
 
     // height of this BST (one-node tree has height 0)
-    public int height() { return height(root); }
+    public int height() { 
+    	return height(root);
+    }
     private int height(Node x) {
         if (x == null) return -1;
         return 1 + Math.max(height(x.left), height(x.right));
     }
 
 
-    // level order traversal
+    // level order traversal ≤„–Ú±È¿˙
     public Iterable<Key> levelOrder() {
         Queue<Key> keys = new Queue<Key>();
         Queue<Node> queue = new Queue<Node>();

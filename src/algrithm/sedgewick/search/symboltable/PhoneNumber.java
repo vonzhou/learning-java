@@ -1,4 +1,4 @@
-package algrithm.sedgewick.search.hashtable;
+package algrithm.sedgewick.search.symboltable;
 
 import java.util.HashSet;
 
