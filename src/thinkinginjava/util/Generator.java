@@ -1,4 +1,3 @@
-//: net/mindview/util/Generator.java
 // A generic interface.
 package thinkinginjava.util;
 
