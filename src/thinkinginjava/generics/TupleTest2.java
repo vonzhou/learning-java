@@ -31,12 +31,9 @@ public class TupleTest2 {
 		TwoTuple<String, Integer> ttsi = f();
 		System.out.println(ttsi);
 		System.out.println(f2());
+		TwoTuple<String, Integer> test = f2();
 		System.out.println(g());
 		System.out.println(h());
 		System.out.println(k());
 	}
-} /*
- * Output: (80% match) (hi, 47) (hi, 47) (Amphibian@7d772e, hi, 47)
- * (Vehicle@757aef, Amphibian@d9f9c3, hi, 47) (Vehicle@1a46e30,
- * Amphibian@3e25a5, hi, 47, 11.1)
- */// :~
+} 
