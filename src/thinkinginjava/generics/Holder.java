@@ -27,7 +27,7 @@ public class Holder<T> {
 		Apple d = Apple.get();
 		Apple.set(d);
 		
-		// Holder<Fruit> Fruit = Apple; // Cannot upcast
+		 //Holder<Fruit> Fruit = Apple; // Cannot upcast
 		
 		Holder<? extends Fruit> fruit = Apple; // OK
 		Fruit p = fruit.get();
