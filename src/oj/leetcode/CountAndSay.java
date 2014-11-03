@@ -40,6 +40,8 @@ public class CountAndSay {
 				}
 				
 			}
+			//最后一次的判断不管与前一个字符是否相同，都没有加入到tm中，所以在处理完这个字符串之后
+			//别忘了加上
 			tmp = tmp  + cnt+ pre;
 			cur = tmp;
 			//System.out.println(cur);
