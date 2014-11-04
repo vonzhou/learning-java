@@ -1,4 +1,4 @@
-package oj.leetcode;
+package oj.leetcode.array;
 
 import java.util.Arrays;
 
@@ -11,6 +11,8 @@ import java.util.Arrays;
  * For example,
  * Given input array A = [1,1,2],
  *Your function should return length = 2, and A is now [1,2].
+ *
+ *相关题目： Remove Element
  */
 public class RemoveDuplicatesFromSortedArray {
 	public static int removeDuplicates(int[] A) {
