@@ -1,6 +1,7 @@
 
----------Tree -----------
+☆☆☆  树 Tree 
 Balanced Binary Tree  什么是剪枝，避免多次遍历；
+Path Sum
 
 --------String----------
 split方法注意理解, 原理是啥？ 是否总能符合自己的需求；
@@ -11,3 +12,6 @@ split方法注意理解, 原理是啥？ 是否总能符合自己的需求；
 
 Triangle
 Minimum Path Sum   
+
+
+
