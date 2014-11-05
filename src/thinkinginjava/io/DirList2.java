@@ -1,4 +1,4 @@
-//: io/DirList2.java
+
 // Uses anonymous inner classes.
 // {Args: "D.*\.java"}
 package thinkinginjava.io;
@@ -32,6 +32,4 @@ public class DirList2 {
 		for (String dirItem : list)
 			System.out.println(dirItem);
 	}
-} /*
- * Output: DirectoryDemo.java DirList.java DirList2.java DirList3.java
- */// :~
+}

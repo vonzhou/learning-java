@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class DirList {
 	public static void main(String[] args) {
-		File path = new File("E:/KuGou/");
+		File path = new File("C:/data/");
 		String[] list;
 		if (args.length == 0)
 			list = path.list();
@@ -32,6 +32,4 @@ class DirFilter implements FilenameFilter {
 	public boolean accept(File dir, String name) {
 		return pattern.matcher(name).matches();
 	}
-} /*
- * Output: DirectoryDemo.java DirList.java DirList2.java DirList3.java
- */// :~
+} 
