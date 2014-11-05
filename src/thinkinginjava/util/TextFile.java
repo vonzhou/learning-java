@@ -35,7 +35,7 @@ public class TextFile extends ArrayList<String> {
 			try {
 				out.print(text);
 			} finally {
-				out.close();
+				out.close(); // 注意这里
 			}
 		} catch (IOException e) {
 			throw new RuntimeException(e);
@@ -53,7 +53,7 @@ public class TextFile extends ArrayList<String> {
 
 	// Normally read by lines:
 	public TextFile(String fileName) {
-		this(fileName, "\n");
+		this(fileName, "\n");  // 默认以换行符来分割
 	}
 
 	public void write(String fileName) {
@@ -75,6 +75,7 @@ public class TextFile extends ArrayList<String> {
 	public static void main(String[] args) {
 		String file = read("TextFile.java");
 		write("test.txt", file);
+		
 		TextFile text = new TextFile("test.txt");
 		text.write("test2.txt");
 		// Break into unique sorted list of words:
