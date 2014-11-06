@@ -20,6 +20,7 @@ public class ChannelCopy {
 		ByteBuffer buffer = ByteBuffer.allocate(BSIZE);
 		
 		//The number of bytes read, possibly zero, or -1 if the channel has reached end-of-stream
+		// 返回0是啥情况？？？
 		while (in.read(buffer) != -1) {
 			buffer.flip(); // Prepare for writing
 			out.write(buffer);

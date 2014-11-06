@@ -24,7 +24,7 @@ public class GetChannel {
 		fc = new FileInputStream("C:/data/data.txt").getChannel();
 		ByteBuffer buff = ByteBuffer.allocate(BSIZE);
 		fc.read(buff);
-		buff.flip(); // for reading
+		buff.flip(); //◊¢“‚’‚¿Ô for reading
 		while (buff.hasRemaining())
 			System.out.print((char) buff.get());
 	}
