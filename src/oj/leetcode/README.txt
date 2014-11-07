@@ -2,6 +2,8 @@
 ☆☆☆  数组 Array
 Pascal's Triangle 就是普通的迭代，注意细节，如果让求 (a+b)^n 的系数，是不是可以想到帕斯卡三角形这里。
 
+☆  栈 Stack
+Valid Parentheses 括号匹配问题，只要思路清晰，很简单。
 
 
 --------------------
