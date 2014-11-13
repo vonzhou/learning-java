@@ -2,6 +2,7 @@ package oj.leetcode.tree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /*
  * Given a binary tree, return the inorder traversal of its nodes' values.
@@ -23,6 +24,7 @@ import java.util.List;
  * 相关题目 ： Binary Tree Preorder Traversal
  */
 public class BinaryTreeInorderTraversal {
+	// 递归实现
 	public List<Integer> inorderTraversal(TreeNode root) {
 		List<Integer> ll = new ArrayList<Integer>();
 		List<Integer> rl = new ArrayList<Integer>();
@@ -43,4 +45,30 @@ public class BinaryTreeInorderTraversal {
 		
 		return ll;
 	}
+	
+		// 非递归实现，主要是找到一种迭代模式
+		public List<Integer> inorderTraversal2(TreeNode root) {
+			List<Integer> res = new ArrayList<Integer>();
+			if(root == null) return res;
+			
+			Stack<TreeNode> stack = new Stack<TreeNode>();
+			TreeNode foot = root;  // footprint
+			// p非空  或者 栈中还有元素 就要继续
+			
+			while(!stack.isEmpty() || foot != null){
+				// go to the left most
+				if(foot != null){
+					stack.push(foot);
+					foot = foot.left;
+				}else{
+					// stack is not empty , need roll back
+					TreeNode mid = stack.pop();
+					res.add(mid.val);
+					// iterate the right
+					foot = mid.right;
+				}
+			}
+			
+			return res;
+		}
 }
