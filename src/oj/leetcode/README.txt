@@ -16,7 +16,7 @@ Min Stack 利用两个栈来实现常数时间的获得最小元素，时间空间权衡的例子。
 Balanced Binary Tree  什么是剪枝，避免多次遍历；
 Path Sum
 Binary Tree Postorder/Inorder/Preorder Traversal 考察二叉树的前中后序的非递归实现，难点是后序遍历。
-
+Populating Next Right Pointers in Each Node 将每一层的节点用next串接起来，难点在于常数空间复杂度。
 
 ----------------------
 ☆☆☆  字符串 String
