@@ -3,8 +3,9 @@
 Pascal's Triangle 就是普通的迭代，注意细节，如果让求 (a+b)^n 的系数，是不是可以想到帕斯卡三角形这里。
 Plus One 简单，空间申请大一格，而后处理进位，这里无需考虑溢出的问题，大数相加的问题？
 Container With Most Water 通过两指针来找到满足某条件的两个点。
+(◇)3Sum  找3数之和是0，难点在于如何消除重复的triple，不能用JCF的Set，需要进一步思考！！
 
-
+-----------------------
 ☆☆☆  链表 Link List
 Linked List Cycle 判断链表是否有循环，两指针问题，看是否会邂逅，
 Add Two Numbers 遍历相加，简单。
@@ -17,7 +18,7 @@ Min Stack 利用两个栈来实现常数时间的获得最小元素，时间空间权衡的例子。
 ☆☆☆  树 Tree 
 Balanced Binary Tree  什么是剪枝，避免多次遍历；
 Path Sum
-Binary Tree Postorder/Inorder/Preorder Traversal 考察二叉树的前中后序的非递归实现，难点是后序遍历。
+(◇)Binary Tree Postorder/Inorder/Preorder Traversal 考察二叉树的前中后序的非递归实现，难点是后序遍历。
 Populating Next Right Pointers in Each Node 将每一层的节点用next串接起来，难点在于常数空间复杂度。
 
 ----------------------
