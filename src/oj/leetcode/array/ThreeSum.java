@@ -2,9 +2,7 @@ package oj.leetcode.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /*
  * Given an array S of n integers, are there elements a, b, c 
