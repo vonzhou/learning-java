@@ -142,7 +142,7 @@ public class Graph {
      * Unit tests the <tt>Graph</tt> data type.
      */
     public static void main(String[] args) {
-        In in = new In(args[0]);
+        In in = new In("resource/alg-dataset/tinyG.txt");
         Graph G = new Graph(in);
         StdOut.println(G);
     }
