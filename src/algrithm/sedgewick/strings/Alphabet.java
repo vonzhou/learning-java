@@ -24,10 +24,11 @@ public class Alphabet {
     public Alphabet(String alpha) {
 
         // check that alphabet contains no duplicate chars
-    	//这么大的空间值得吗？
+    	//在构造字母表的时候，用来判断参数不会重复，
         boolean[] unicode = new boolean[Character.MAX_VALUE];
         for (int i = 0; i < alpha.length(); i++) {
             char c = alpha.charAt(i);
+            // 用字符做索引
             if (unicode[c])
                 throw new IllegalArgumentException("Illegal alphabet: repeated character = '" + c + "'");
             unicode[c] = true;
@@ -40,6 +41,7 @@ public class Alphabet {
             inverse[i] = -1;
 
         // can't use char since R can be as big as 65,536
+        // 相对顺序就是他们的索引值
         for (int c = 0; c < R; c++)
             inverse[alphabet[c]] = c;
     }
