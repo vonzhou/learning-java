@@ -3,6 +3,7 @@ package oj.leetcode.string;
 /*
  * Write a function to find the longest common prefix 
  * string amongst an array of strings.
+ * 时间复杂度是 O(nm) vs 使用 Trie 树
  */
 public class LongestCommonPrefix {
 	
