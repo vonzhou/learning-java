@@ -43,3 +43,21 @@ Triangle
 Minimum Path Sum   
 Maximum Subarray 找连续元素之后最大的子数组
 
+
+----------------------
+Tag
+☆☆☆  Backtracking
+Subsets
+Generate Parentheses
+
+
+
+
+
+
+
+
+
+
+
+

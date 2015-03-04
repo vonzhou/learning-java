@@ -78,11 +78,34 @@ public class GenerateParentheses {
 	
 	/*
 	 * 2. 根据提示怎么使用 回溯 ？ backtracking 
+	 * 过程思考：对于当前字符串 分别加上 "(",")"就行构造，如果发现失衡（左后括号不匹配）就停止递归（剪枝）
+	 * 如果 left > right说明先出现了")" 显然不合理
 	 */
+	public List<String> generateParenthesis2(int n) {
+		List<String> res = new ArrayList<String>();
+		if(n <= 0)
+			return res;
+		String soFar = "";
+		parenHelper(res, soFar, n, n);
+		return res;
+	}
+	
+	
+	private void parenHelper(List<String> res, String soFar, int left, int right) {
+		if(left > right || left < 0 || right < 0)
+			return;
+		if(left == 0 && right == 0){
+			res.add(soFar);
+			return;
+		}
+		
+		parenHelper(res, soFar + "(", left-1, right);
+		parenHelper(res, soFar + ")", left, right-1);
+	}
 
 	public static void main(String[] args) {
 		GenerateParentheses a = new GenerateParentheses();
-		System.out.println(a.generateParenthesis(3));
+		System.out.println(a.generateParenthesis2(3));
 		System.out.println("=======================");
 		Stack<Long> stack = new Stack<Long>();
 		System.out.println(a.isGood(stack, 5, 4));
