@@ -23,7 +23,7 @@ But the following is not:
 public class SymmetricTree {
 	
 	// ตÝน้
-    public boolean isSymmetric(TreeNode root) {
+    public boolean isSymmetric(BinaryTreeNode root) {
     	return false;
     }
 }

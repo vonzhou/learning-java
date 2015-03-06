@@ -14,7 +14,6 @@ public class Test {
 		JButton button=new JButton("A N T");
 		button.addActionListener(new ActionListener(){
 
-			@Override
 			public void actionPerformed(ActionEvent e) {
 				JFrame f=new JFrame("vonzhou");
 				f.add(new JLabel("====================="));

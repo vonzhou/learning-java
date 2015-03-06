@@ -10,14 +10,14 @@ package oj.leetcode.tree;
 public class BalancedBinaryTree {  
 	
 	// 很容易想到这种方式，但是需要重复遍历
-	public  boolean isBalanced(TreeNode root) {
+	public  boolean isBalanced(BinaryTreeNode root) {
 		if(root == null)
 			return true;
 		return isBalanced(root.left) && isBalanced(root.right) 
 				&& Math.abs(height(root.left) - height(root.right)) <= 1;
 	}
 	
-	public  int height(TreeNode root){
+	public  int height(BinaryTreeNode root){
 		if(root == null) return 0;
 		int ll = 0,rl = 0;
 		if(root.left != null)

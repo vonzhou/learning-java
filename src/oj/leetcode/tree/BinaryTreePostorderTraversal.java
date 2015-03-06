@@ -21,13 +21,13 @@ return [3,2,1].
 public class BinaryTreePostorderTraversal {
 	
 	// 这是最难的
-	public List<Integer> postorderTraversal2(TreeNode root) {
+	public List<Integer> postorderTraversal2(BinaryTreeNode root) {
 		List<Integer> res = new ArrayList<Integer>();
 		if(root == null) return res;
 		
-		Stack<TreeNode> stack = new Stack<TreeNode>();
+		Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
 		stack.push(root);
-		TreeNode pre=null, cur=null;  // two pointer
+		BinaryTreeNode pre=null, cur=null;  // two pointer
 		
 		while(!stack.isEmpty() ){
 			cur = stack.peek();   // for probe
@@ -46,11 +46,11 @@ public class BinaryTreePostorderTraversal {
 				if(cur.right != null)
 					stack.push(cur.right);
 				else{
-					TreeNode x = stack.pop();
+					BinaryTreeNode x = stack.pop();
 					res.add(x.val);
 				}
 			}else if(cur.right == pre){//roll back from right child
-				TreeNode x = stack.pop();
+				BinaryTreeNode x = stack.pop();
 				res.add(x.val);
 			}
 		
@@ -61,7 +61,7 @@ public class BinaryTreePostorderTraversal {
 	}
 	
 	//recursive is trivial
-	public List<Integer> postorderTraversal(TreeNode root) {
+	public List<Integer> postorderTraversal(BinaryTreeNode root) {
 		List<Integer> ll = new ArrayList<Integer>();
 		List<Integer> rl = new ArrayList<Integer>();
 		//List<Integer> rootl = new ArrayList<Integer>();

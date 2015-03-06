@@ -10,12 +10,12 @@ package oj.leetcode.tree;
  * 相关问题   -- MaxDepthBinaryTree
  */
 public class MinimumDepthBinaryTree {
-	public int minDepth(TreeNode root) {
+	public int minDepth(BinaryTreeNode root) {
 		if (root == null)
 			return 0; 
 		return getDepth(root);
 	}
-	public int getDepth(TreeNode root) {
+	public int getDepth(BinaryTreeNode root) {
 		if (root == null)
 			return Integer.MAX_VALUE; // 注意这里
 		if(root.left == null && root.right == null)

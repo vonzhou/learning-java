@@ -8,7 +8,7 @@ import java.util.Stack;
 public class BinaryTreePreorderTraversal {
 	
 	//递归实现
-	public static List<Integer> preorderTraversal(TreeNode root) { 
+	public static List<Integer> preorderTraversal(BinaryTreeNode root) { 
 		List<Integer> ll = new ArrayList<Integer>();
 		List<Integer> rl = new ArrayList<Integer>();
 		List<Integer> rootl = new ArrayList<Integer>();
@@ -29,14 +29,14 @@ public class BinaryTreePreorderTraversal {
 	}
 	
 	// 利用一个栈来实现
-	public static List<Integer> preorderTraversal2(TreeNode root) { 
-		Stack<TreeNode> stack = new Stack<TreeNode>();
+	public static List<Integer> preorderTraversal2(BinaryTreeNode root) { 
+		Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
 		List<Integer> rootl = new ArrayList<Integer>();
 		if(root == null) return rootl;
 		stack.push(root);
 		
 		while(!stack.isEmpty()){
-			TreeNode node = stack.pop();
+			BinaryTreeNode node = stack.pop();
 			rootl.add(node.val);
 			if(node.left != null)
 				stack.push(node.left);
@@ -49,7 +49,7 @@ public class BinaryTreePreorderTraversal {
 	
 	public static void main(String[] args) {
 		BinaryTree bt = new BinaryTree(Arrays.asList(12,45));
-		TreeNode root = bt.createBiTreeFromList();
+		BinaryTreeNode root = bt.createBiTreeFromList();
 		
 		List<Integer> res = preorderTraversal(root);
 		System.out.println(res);

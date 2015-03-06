@@ -29,8 +29,8 @@ import java.util.Queue;
  * 每一层的界限如何决定？就是对每层如何计数(！！！通过当前队列的长度决定)
  */
 public class BinaryTreeLevelOrderTraversal {
-	  public List<List<Integer>> levelOrder(TreeNode root) {
-		  Queue<TreeNode> queue = new LinkedList<TreeNode>();
+	  public List<List<Integer>> levelOrder(BinaryTreeNode root) {
+		  Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
 		  List<List<Integer>> res = new ArrayList<List<Integer>>();
 		  List<Integer> level ; // deal with every level
 		  
@@ -43,7 +43,7 @@ public class BinaryTreeLevelOrderTraversal {
 			  // 每一层的时候求一次大小，而不是在处理的过程中，错误for(int i = 0; i < queue.size(); i++)
 			  int size = queue.size();
 			  for(int i = 0; i < size; i++){
-				  TreeNode cur = queue.remove();
+				  BinaryTreeNode cur = queue.remove();
 				  //Retrieves and removes the head of this queue.
 				  //This method differs from poll only in that it throws an 
 				  //exception if this queue is empty.

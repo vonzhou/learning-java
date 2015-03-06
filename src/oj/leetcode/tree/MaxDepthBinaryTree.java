@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MaxDepthBinaryTree {
 	// 因为不知道节点的总数，所以只能通过递归来求解
-	public int maxDepth(TreeNode root) {
+	public int maxDepth(BinaryTreeNode root) {
 		if (root == null)
 			return 0;
 		int left = maxDepth(root.left);
@@ -17,7 +17,7 @@ public class MaxDepthBinaryTree {
 	public static void main(String[] args) {
 		List<Integer> list = Arrays.asList(1, 3, 45, 67, 7, 8, 9, 10);
 		BinaryTree bt = new BinaryTree(list);
-		TreeNode root = bt.createBiTreeFromList();
+		BinaryTreeNode root = bt.createBiTreeFromList();
 		System.out.println(new MaxDepthBinaryTree().maxDepth(root));
 	}
 

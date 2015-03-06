@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BinaryTree {
 	List<Integer> list;
-	TreeNode root;
+	BinaryTreeNode root;
 	int size;
 
 	public BinaryTree(List<Integer> list) {
@@ -13,12 +13,12 @@ public class BinaryTree {
 		this.size = list.size();
 	}
 
-	public TreeNode createBiTreeFromList() {
+	public BinaryTreeNode createBiTreeFromList() {
 		int parentIndex = 0;
 		// 将这些数字转换为一个个节点
-		List<TreeNode> nodes = new ArrayList<TreeNode>();
+		List<BinaryTreeNode> nodes = new ArrayList<BinaryTreeNode>();
 		for (int i = 0; i < list.size(); i++)
-			nodes.add(new TreeNode(list.get(i)));
+			nodes.add(new BinaryTreeNode(list.get(i)));
 
 		int lastParentIndex = nodes.size() / 2 - 1;
 		// 根据二叉树的特点将这些节点链接起来

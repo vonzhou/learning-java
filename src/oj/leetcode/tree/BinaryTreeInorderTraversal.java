@@ -25,7 +25,7 @@ import java.util.Stack;
  */
 public class BinaryTreeInorderTraversal {
 	// 递归实现
-	public List<Integer> inorderTraversal(TreeNode root) {
+	public List<Integer> inorderTraversal(BinaryTreeNode root) {
 		List<Integer> ll = new ArrayList<Integer>();
 		List<Integer> rl = new ArrayList<Integer>();
 		//List<Integer> rootl = new ArrayList<Integer>();
@@ -47,12 +47,12 @@ public class BinaryTreeInorderTraversal {
 	}
 	
 		// 非递归实现，主要是找到一种迭代模式
-		public List<Integer> inorderTraversal2(TreeNode root) {
+		public List<Integer> inorderTraversal2(BinaryTreeNode root) {
 			List<Integer> res = new ArrayList<Integer>();
 			if(root == null) return res;
 			
-			Stack<TreeNode> stack = new Stack<TreeNode>();
-			TreeNode foot = root;  // footprint
+			Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
+			BinaryTreeNode foot = root;  // footprint
 			// p非空  或者 栈中还有元素 就要继续
 			
 			while(!stack.isEmpty() || foot != null){
@@ -62,7 +62,7 @@ public class BinaryTreeInorderTraversal {
 					foot = foot.left;
 				}else{
 					// stack is not empty , need roll back
-					TreeNode mid = stack.pop();
+					BinaryTreeNode mid = stack.pop();
 					res.add(mid.val);
 					// iterate the right
 					foot = mid.right;

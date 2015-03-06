@@ -20,7 +20,7 @@ public class PathSum {
 	// 1. 第一反应就是遍历一遍，得到所有sum的情况到一个哈希表中
 	// 却没有变通 分而治之 询问子节点是否有 sum -x 的节点 
 	// 注意满足条件：是叶节点 并且 value = sum
-	public boolean hasPathSum(TreeNode root, int sum) {
+	public boolean hasPathSum(BinaryTreeNode root, int sum) {
 		if(root == null)
 			return false;
 		boolean res = false;

@@ -7,7 +7,7 @@ package oj.leetcode.tree;
  * identical and the nodes have the same value.
  */
 public class SameTree {
-	public boolean isSameTree(TreeNode p, TreeNode q) {
+	public boolean isSameTree(BinaryTreeNode p, BinaryTreeNode q) {
 		if(p == null && q == null)
 			return true;
 		else if(p == null || q == null)

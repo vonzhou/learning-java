@@ -27,9 +27,9 @@ return its bottom-up level order traversal as:
  * 和上一个题不同的是，这里要自底向上的方式，只需要构造链表的方式改变即可
  */
 public class BinaryTreeLevelOrderTraversalII {
-	  public List<List<Integer>> levelOrderBottom(TreeNode root) {
+	  public List<List<Integer>> levelOrderBottom(BinaryTreeNode root) {
 		  
-		  Queue<TreeNode> queue = new LinkedList<TreeNode>();
+		  Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
 		  // 采用链表，头插法实现倒序
 		  List<List<Integer>> res = new LinkedList<List<Integer>>();  
 		  List<Integer> level ; // deal with every level
@@ -43,7 +43,7 @@ public class BinaryTreeLevelOrderTraversalII {
 			  // 每一层的时候求一次大小，而不是在处理的过程中，错误for(int i = 0; i < queue.size(); i++)
 			  int size = queue.size();
 			  for(int i = 0; i < size; i++){
-				  TreeNode cur = queue.remove();
+				  BinaryTreeNode cur = queue.remove();
 				  //Retrieves and removes the head of this queue.
 				  //This method differs from poll only in that it throws an 
 				  //exception if this queue is empty.
