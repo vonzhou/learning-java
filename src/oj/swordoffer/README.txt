@@ -10,7 +10,9 @@
 6. 根据二叉树的前序遍历和中序遍历结果构建二叉树 （假设遍历结果不含重复数字） （ConstructBinaryTree）
 7. 用两个栈实现队列，要求实现appendTail,delteHead方法  （QueueWithTwoStacks）；
 相关：用两个队列实现一个栈（StackWithTwoQueues）；
+8. 旋转数组的最小数字 - MinNumberInRotatedArray;
 
+对员工按年龄排序，时间效率是O(N)  - SortAges;
 
 
 
@@ -26,4 +28,13 @@ P54  sizeof(数组)；
 P59 字符串常量 字符数组；
 P71 二叉树的遍历方式 递归/非递归 实现；
 P72 Java中基于红黑树的集合有哪些 ？
+P81 熟练掌握各种排序算法
+
+
+
+
+
+
+
+
  
