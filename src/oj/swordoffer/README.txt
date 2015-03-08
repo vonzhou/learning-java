@@ -18,6 +18,25 @@
 相关：输入两个整数m,n ，要改变m的二进制表示中多少位可以得到n - BitsReverseTotal;
 11.实现函数 double power(double base,int exponent)实现base的exponent次方，不需要考虑大数问题 - Power;
 12. 打印出1到最大的n位数  - Print1ToMaxNDigits;
+13. 给定单向链表的头指针和一个节点的指针，实现O(1)删除该节点 - DeleteNodeInList;
+14. 调整数组顺序使得奇数位于偶数的前面  - ReorderOddEven;
+15. 链表中倒数第k个节点   - KthNodeFromEnd;
+相关：求链表的中间节点;
+相关：判断一个单链表是否形成了一个环;
+16.  反转链表    -- ReverseList；
+相关：用递归实现；
+17. 合并两个排序的链表 （递归，非递归）-- MergeSortedLists；
+18. 判断二叉树B是不是A的子结构   -- SubstructureInTree ;
+19. 二叉树的镜像  -- MirrorOfBinaryTree;
+20. 顺时针打印矩阵  -- PrintMatrixClockwise ;
+21. 包含min函数的栈   -- StackWithMin ;
+22. 输入两个整数序列，第一个序列表示栈的压入顺序，判断第二个序列是否为该站的弹出顺序，假设压入栈的所有数字均不相等    -- StackPushPopOrder ;
+23. 从上往下打印二叉树,层序遍历   --  LevelTraverseBinaryTree;
+24. 判断一个整数数组是否为某二叉搜索树的后序遍历结果，假设输入数组的任意两个数字都不相同      --   SequenceOfBST ;
+25. 打印出二叉树中结点和为输入整数的所有路径，从根节点往下一直到叶节点所经过的节点形成一条路径       -- PathInTree;
+26. 实现ComplexListNode clone(CompleListNode head)复制一个复杂链表    ---   CopyComplexList ;
+27. 将二叉搜索树转换成一个排序的双向链表，不能创建任何新的节点，只能调整树中节点指针     ---  ConvertBinarySearchTree ;
+
 
 
 对员工按年龄排序，时间效率是O(N)  - SortAges;
@@ -39,7 +58,7 @@ P72 Java中基于红黑树的集合有哪些 ？
 P81 熟练掌握各种排序算法
 P92 斐波那契数学公式证明？
 P108 阅读Double.compare()代码 
-
+P 学习Java8 lambda expression 
 
 
 
