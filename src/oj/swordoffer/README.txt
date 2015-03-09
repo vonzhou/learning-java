@@ -38,7 +38,14 @@
 27. 将二叉搜索树转换成一个排序的双向链表，不能创建任何新的节点，只能调整树中节点指针     ---  ConvertBinarySearchTree ;
 28. 字符串的排列      --  StringPermutation  ;
 相关： 求字符数组的子集合   -- ExhaustiveSubset ;
-相关： 
+相关： 输入8个数字判断有没有可能把这8个数字放到正方体8个顶点上使得三组对面上4顶点之和相等  ;
+相关：8X8 八皇后问题     ;
+29. 数组中出现次数超过一半的数字   --  MoreThanHalfNumber;
+30. 最小的k个数   -- KLeastNumbers ;
+31. 连续子数组的最大和    -- GreatestSubarraySum ;
+
+
+
 
 
 对员工按年龄排序，时间效率是O(N)  - SortAges;
