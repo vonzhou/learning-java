@@ -43,7 +43,19 @@
 29. 数组中出现次数超过一半的数字   --  MoreThanHalfNumber;
 30. 最小的k个数   -- KLeastNumbers ;
 31. 连续子数组的最大和    -- GreatestSubarraySum ;
-
+32. 从1到n整数十进制表示中1出现的次数      -- NumberOf1 ;
+33. 给定一个正整数数字，打印出能拼接的所有数字中最小的一个   --  ConstructMinFromIntArray; 
+34. 把只包含因子2,3,5的数称作丑数 Ugly Number，求按从小到大顺序的第1500个丑数，习惯上把1当做第一个丑数   -- UglyNumber ;
+35. 在字符串中找出第一个只出现一次的字符     --  FirstNotRepeatChar;
+相关：输入两个字符串 从第一个字符串中删除在第二个字符串中出现的所有字符         --  StringFilter;
+相关：删除字符串中所有重复出现的字符 如输入"goole"则结果是"gole".  -- DeleteRepeatChars ;
+相关：如果两个单词出现的字母相同 ，每个字母出现的次数也相同的，则互为变位词      -- AnagramWords ;
+36. 求一个数组中逆序对的总数      --   InversePairs;
+37. 两个链表的第一个公共节点     -- FirstCommonNodeInLists ;
+38. 数字在排序数组中出现的次数         -- NumberKInSortedArr  ;
+39. 求二叉树的深度   -- TreeDepth ;
+           判断一个二叉树是否是平衡二叉树   ---- IsBalancedTree;
+40. 一个整型数组中出了两个数字之外 每个数字都出现了两次 找出这两个只出现一次的数字          --  ;
 
 
 
@@ -68,6 +80,7 @@ P81 熟练掌握各种排序算法
 P92 斐波那契数学公式证明？
 P108 阅读Double.compare()代码 
 P 学习Java8 lambda expression 
+体会 pass by value    -- PassByValue;
 
 
 
