@@ -12,5 +12,6 @@ public class ListTest {
 		System.out.println(sub);
 		sub.set(0, 100); // 对sub list 所做的修改会反映到原始列表中
 		System.out.println(list);
+		
 	}
 }

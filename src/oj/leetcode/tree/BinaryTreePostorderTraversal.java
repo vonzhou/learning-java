@@ -60,6 +60,30 @@ public class BinaryTreePostorderTraversal {
 		return res;
 	}
 	
+	// Use two stacks 
+	public List<Integer> postorderTraversal3(BinaryTreeNode root) {
+		List<Integer> res = new ArrayList<Integer>();
+		if(root == null) return res;
+		
+		Stack<BinaryTreeNode> stack1 = new Stack<BinaryTreeNode>();
+		Stack<BinaryTreeNode> stack2 = new Stack<BinaryTreeNode>();
+		stack1.push(root);
+		BinaryTreeNode pre=null, cur=null;  // two pointer
+		
+		while(!stack1.isEmpty() ){
+			BinaryTreeNode t = stack1.pop();
+			stack2.push(t);
+			if(t.left != null)
+				stack1.push(t.left);
+			if(t.right != null)
+				stack1.push(t.right);
+		}
+		while(!stack2.isEmpty())
+			res.add(stack2.pop().val);
+		
+		return res;
+	}
+	
 	//recursive is trivial
 	public List<Integer> postorderTraversal(BinaryTreeNode root) {
 		List<Integer> ll = new ArrayList<Integer>();
