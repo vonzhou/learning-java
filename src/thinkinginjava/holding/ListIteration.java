@@ -19,6 +19,7 @@ public class ListIteration {
 			System.out.print(it.previous().id() + " ");
 		System.out.println();
 		System.out.println(pets);
+		
 		it = pets.listIterator(3);
 		while (it.hasNext()) {
 			it.next();
