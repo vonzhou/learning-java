@@ -20,6 +20,7 @@ public class PriorityQueueDemo {
 				3, 9, 14, 18, 21, 23, 25);
 		priorityQueue = new PriorityQueue<Integer>(ints);
 		QueueDemo.printQ(priorityQueue);
+		
 		priorityQueue = new PriorityQueue<Integer>(ints.size(),
 				Collections.reverseOrder());
 		priorityQueue.addAll(ints);

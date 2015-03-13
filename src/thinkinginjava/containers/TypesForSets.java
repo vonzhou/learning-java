@@ -37,12 +37,14 @@ class TreeType extends SetType implements Comparable<TreeType> {
 		super(n);
 	}
 
+	// ·´Ðò...
 	public int compareTo(TreeType arg) {
 		return (arg.i < i ? -1 : (arg.i == i ? 0 : 1));
 	}
 }
 
 public class TypesForSets {
+	
 	static <T> Set<T> fill(Set<T> set, Class<T> type) {
 		try {
 			for (int i = 0; i < 10; i++)
@@ -61,9 +63,10 @@ public class TypesForSets {
 	}
 
 	public static void main(String[] args) {
-		test(new HashSet<HashType>(), HashType.class);
-		test(new LinkedHashSet<HashType>(), HashType.class);
-		test(new TreeSet<TreeType>(), TreeType.class);
+		//test(new HashSet<HashType>(), HashType.class);
+		//test(new LinkedHashSet<HashType>(), HashType.class);
+		//test(new TreeSet<TreeType>(), TreeType.class);
+		
 		// Things that don't work:
 		test(new HashSet<SetType>(), SetType.class);
 		test(new HashSet<TreeType>(), TreeType.class);

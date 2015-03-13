@@ -13,6 +13,7 @@ public class SpringDetector {
 			throws Exception {
 		Constructor<T> ghog = type.getConstructor(int.class);
 		Map<Groundhog, Prediction> map = new HashMap<Groundhog, Prediction>();
+		
 		for (int i = 0; i < 10; i++)
 			map.put(ghog.newInstance(i), new Prediction());
 		print("map = " + map);
@@ -22,9 +23,13 @@ public class SpringDetector {
 			print(map.get(gh));
 		else
 			print("Key not found: " + gh);
+		
+		
 	}
 
 	public static void main(String[] args) throws Exception {
 		detectSpring(Groundhog.class);
+		System.out.println("========================");
+		Object o = "hlll";
 	}
 }

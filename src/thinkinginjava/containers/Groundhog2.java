@@ -15,4 +15,12 @@ public class Groundhog2 extends Groundhog {
 	public boolean equals(Object o) {
 		return o instanceof Groundhog2 && (number == ((Groundhog2) o).number);
 	}
-} // /:~
+	
+	
+	
+	public static void main(String[] args) {
+		// test instanceof
+		String s = null;
+		System.out.println(s instanceof String);
+	}
+} 

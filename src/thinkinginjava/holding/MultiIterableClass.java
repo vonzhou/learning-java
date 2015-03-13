@@ -47,14 +47,12 @@ public class MultiIterableClass extends IterableClass {
 		for (String s : mic.reversed())
 			System.out.print(s + " ");
 		System.out.println();
+		
 		for (String s : mic.randomized())
 			System.out.print(s + " ");
 		System.out.println();
+		
 		for (String s : mic)
 			System.out.print(s + " ");
 	}
-} /*
- * Output: banana-shaped. be to Earth the know we how is that And is
- * banana-shaped. Earth that how the be And we know to And that is how we know
- * the Earth to be banana-shaped.
- */// :~
+}
