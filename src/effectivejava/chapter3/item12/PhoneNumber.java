@@ -1,5 +1,5 @@
 // Making PhoneNumber comparable - Pages 65-66
-package org.effectivejava.examples.chapter03.item12;
+package effectivejava.chapter3.item12;
 
 import java.util.NavigableSet;
 import java.util.Random;

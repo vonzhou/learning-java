@@ -1,4 +1,3 @@
-//: typeinfo/pets/LiteralPetCreator.java
 // Using class literals.
 package thinkinginjava.typeinfo.pets;
 

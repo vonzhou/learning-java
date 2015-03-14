@@ -1,4 +1,3 @@
-//: typeinfo/ClassCasts.java
 package thinkinginjava.typeinfo;
 
 class Building {
@@ -14,4 +13,4 @@ public class ClassCasts {
 		House h = houseType.cast(b);
 		h = (House) b; // ... or just do this.
 	}
-} // /:~
+} 

@@ -1,4 +1,3 @@
-//: typeinfo/WildcardClassReferences.java
 package thinkinginjava.typeinfo;
 
 public class WildcardClassReferences {
@@ -6,4 +5,4 @@ public class WildcardClassReferences {
 		Class<?> intClass = int.class;
 		intClass = double.class;
 	}
-} // /:~
+} 

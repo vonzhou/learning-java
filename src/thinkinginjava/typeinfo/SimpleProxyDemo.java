@@ -1,4 +1,3 @@
-//: typeinfo/SimpleProxyDemo.java
 package thinkinginjava.typeinfo;
 
 import static thinkinginjava.util.Print.print;
@@ -45,9 +44,7 @@ class SimpleProxyDemo {
 
 	public static void main(String[] args) {
 		consumer(new RealObject());
+		System.out.println("-----------");
 		consumer(new SimpleProxy(new RealObject()));
 	}
-} /*
- * Output: doSomething somethingElse bonobo SimpleProxy doSomething doSomething
- * SimpleProxy somethingElse bonobo somethingElse bonobo
- */// :~
+} 

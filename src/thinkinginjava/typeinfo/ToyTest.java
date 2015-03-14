@@ -49,6 +49,7 @@ public class ToyTest {
 			System.exit(1);
 		}
 		printInfo(c);
+		
 		for (Class face : c.getInterfaces())
 			printInfo(face);
 		Class up = c.getSuperclass();

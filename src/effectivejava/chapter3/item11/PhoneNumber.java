@@ -1,5 +1,5 @@
 // Adding a clone method to PhoneNumber - page 55
-package org.effectivejava.examples.chapter03.item11;
+package effectivejava.chapter3.item11;
 
 import java.util.HashMap;
 import java.util.Map;

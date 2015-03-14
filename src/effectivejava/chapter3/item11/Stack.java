@@ -1,5 +1,5 @@
 // A cloneable version of Stack - Pages 56-57
-package org.effectivejava.examples.chapter03.item11;
+package effectivejava.chapter3.item11;
 
 import java.util.Arrays;
 
@@ -48,13 +48,16 @@ public class Stack implements Cloneable {
 
 	// To see that clone works, call with several command line arguments
 	public static void main(String[] args) {
+		
 		Stack stack = new Stack();
 		for (String arg : args)
 			stack.push(arg);
 		Stack copy = stack.clone();
+		
 		while (!stack.isEmpty())
 			System.out.print(stack.pop() + " ");
 		System.out.println();
+		
 		while (!copy.isEmpty())
 			System.out.print(copy.pop() + " ");
 	}

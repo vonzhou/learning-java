@@ -1,6 +1,4 @@
-//: typeinfo/PetCount.java
 // Using instanceof.
-
 package thinkinginjava.typeinfo;
 
 import java.util.HashMap;

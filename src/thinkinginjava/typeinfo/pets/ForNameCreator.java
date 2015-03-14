@@ -1,4 +1,3 @@
-//: typeinfo/pets/ForNameCreator.java
 package thinkinginjava.typeinfo.pets;
 
 import java.util.ArrayList;

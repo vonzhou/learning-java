@@ -1,6 +1,3 @@
-//: typeinfo/toys/GenericToyTest.java
-// Testing class Class.
-
 package thinkinginjava.typeinfo;
 
 public class GenericToyTest {
@@ -14,4 +11,4 @@ public class GenericToyTest {
 		// Only produces Object:
 		Object obj = up.newInstance();
 	}
-} // /:~
+} 

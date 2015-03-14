@@ -1,5 +1,3 @@
-//: typeinfo/FilledList.java
-
 package thinkinginjava.typeinfo;
 
 import java.util.ArrayList;

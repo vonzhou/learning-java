@@ -1,4 +1,3 @@
-//: typeinfo/RegisteredFactories.java
 // Registering Class Factories in the base class.
 package thinkinginjava.typeinfo;
 

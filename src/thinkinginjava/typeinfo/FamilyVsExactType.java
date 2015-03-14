@@ -1,4 +1,3 @@
-//: typeinfo/FamilyVsExactType.java
 // The difference between instanceof and class
 package thinkinginjava.typeinfo;
 
@@ -11,6 +10,7 @@ class Derived extends Base {
 }
 
 public class FamilyVsExactType {
+	
 	static void test(Object x) {
 		print("Testing x of type " + x.getClass());
 		print("x instanceof Base " + (x instanceof Base));
