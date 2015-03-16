@@ -17,6 +17,7 @@ public class Heap {
         //先构建一个heap，而后替换，并sync
         for (int k = N/2; k >= 1; k--)
             sink(pq, k, N);
+        
         while (N > 1) {
             exch(pq, 1, N--);
             sink(pq, 1, N);

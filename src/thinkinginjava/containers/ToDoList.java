@@ -4,6 +4,7 @@ package thinkinginjava.containers;
 import java.util.*;
 
 class ToDoList extends PriorityQueue<ToDoList.ToDoItem> {
+	
 	static class ToDoItem implements Comparable<ToDoItem> {
 		private char primary;
 		private int secondary;
