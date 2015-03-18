@@ -59,6 +59,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
         pq = (Key[]) new Object[keys.length + 1]; 
         for (int i = 0; i < N; i++)
             pq[i+1] = keys[i];
+        // 开始先构造出一个大顶堆
         for (int k = N/2; k >= 1; k--)
             sink(k);
         assert isMaxHeap();
