@@ -62,7 +62,6 @@ public class Triangle {
 		paths[0][0] = triangle.get(0).get(0);
 		// 边界处理
 		for (int i = 1; i < size; i++) {
-			int levelSize = triangle.get(i).size();
 			paths[i][0] = triangle.get(i).get(0) + paths[i - 1][0];
 			paths[i][i] = triangle.get(i).get(i) + paths[i - 1][i - 1];
 
@@ -75,6 +74,7 @@ public class Triangle {
 						+ Math.min(paths[i - 1][j - 1], paths[i - 1][j]);
 			}
 
+		// 此时找到最后一行中的最小值即可
 		int min = paths[size - 1][0];
 		for (int i = 0; i < size; i++)
 			if (paths[size - 1][i] < min)
@@ -105,5 +105,13 @@ public class Triangle {
 	
 
 		return paths[0];
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		int[][] paths = new int[3][6];
+		System.out.println(paths.length);
+		System.out.println(paths[0].length);
 	}
 }

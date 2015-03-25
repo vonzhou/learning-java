@@ -25,7 +25,7 @@ public class UniqueBinarySearchTrees {
 		int trees=0;
 		
 		for(int j=0; j <n; j++){
-			trees += numTrees(j) * numTrees(n-1-j);
+			trees += numTrees(j) * numTrees(n-1-j); // 是 Join操作 所以是乘
 		}
 				
 		return trees;
