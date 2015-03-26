@@ -17,6 +17,8 @@
 10.输入一个整数，输出其二进制表示中1的个数   - NumberOf1InBinary;
 相关：用一条语句判断一个整数是不是2的整数次方 - IsPowerOf2;
 相关：输入两个整数m,n ，要改变m的二进制表示中多少位可以得到n - BitsReverseTotal;
+相关：编程之美 2.1；
+
 11.实现函数 double power(double base,int exponent)实现base的exponent次方，不需要考虑大数问题 - Power;
 12. 打印出1到最大的n位数  - Print1ToMaxNDigits;
 13. 给定单向链表的头指针和一个节点的指针，实现O(1)删除该节点 - DeleteNodeInList;

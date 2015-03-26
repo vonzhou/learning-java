@@ -38,21 +38,6 @@ public class NumberOf1InBinary {
 		return count;
 	}
 	
-	// 不移动整数 而是利用一个游标来探测
-	// TODO flag 是如何变为0的
-	public static int bit1Number3(int n){
-		int count = 0;
-		int flag = 1;
-		while(flag!=0){
-			if((n & flag) != 0)
-				count ++;
-			System.out.println("ni loop :" + flag);
-			flag = flag << 1;
-		}
-		
-		return count;
-	}
-	
 	// 更吊的方法
 	public static int bit1Number4(int n){
 		int count = 0;
