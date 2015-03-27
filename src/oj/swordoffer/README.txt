@@ -12,8 +12,11 @@
 7. 用两个栈实现队列，要求实现appendTail,delteHead方法  （QueueWithTwoStacks）；
 相关：用两个队列实现一个栈（StackWithTwoQueues）；
 8. 旋转数组的最小数字 - MinNumberInRotatedArray;
+
 9. 求斐波那契数列第n项  - Fibonacci;
 相关：一只青蛙每次可以跳一级或两级台阶，那么到达n级台阶有多少种跳法?
+编程之美2.9
+
 10.输入一个整数，输出其二进制表示中1的个数   - NumberOf1InBinary;
 相关：用一条语句判断一个整数是不是2的整数次方 - IsPowerOf2;
 相关：输入两个整数m,n ，要改变m的二进制表示中多少位可以得到n - BitsReverseTotal;
