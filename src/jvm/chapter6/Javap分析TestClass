@@ -1,0 +1,62 @@
+//P172
+vonzhou@CHOWN:~/GitHub/JavaProject/learning-java/bin/jvm/chapter6$ javap -verbose TestClass.class 
+Classfile /home/vonzhou/GitHub/JavaProject/learning-java/bin/jvm/chapter6/TestClass.class
+  Last modified Apr 29, 2015; size 379 bytes
+  MD5 checksum 70a67e773b621619d03f9d1b5ac91af6
+  Compiled from "TestClass.java"
+public class jvm.chapter6.TestClass
+  SourceFile: "TestClass.java"
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Class              #2;            //  jvm/chapter6/TestClass
+   #2 = Utf8               jvm/chapter6/TestClass;
+   #3 = Class              #4;            //  java/lang/Object
+   #4 = Utf8               java/lang/Object;
+   #5 = Utf8               m;
+   #6 = Utf8               I;
+   #7 = Utf8               <init>;
+   #8 = Utf8               ()V;
+   #9 = Utf8               Code;
+  #10 = Methodref          #3.#11;        //  java/lang/Object."<init>":()V
+  #11 = NameAndType        #7:#8;         //  "<init>":()V
+  #12 = Utf8               LineNumberTable;
+  #13 = Utf8               LocalVariableTable;
+  #14 = Utf8               this;
+  #15 = Utf8               Ljvm/chapter6/TestClass;;
+  #16 = Utf8               inc;
+  #17 = Utf8               ()I;
+  #18 = Fieldref           #1.#19;        //  jvm/chapter6/TestClass.m:I
+  #19 = NameAndType        #5:#6;         //  m:I
+  #20 = Utf8               SourceFile;
+  #21 = Utf8               TestClass.java;
+{
+  public jvm.chapter6.TestClass();
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #10;                // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   Ljvm/chapter6/TestClass;
+
+  public int inc();
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: getfield      #18;                // Field m:I
+         4: iconst_1      
+         5: iadd          
+         6: ireturn       
+      LineNumberTable:
+        line 6: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       7     0  this   Ljvm/chapter6/TestClass;
+}
