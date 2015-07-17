@@ -1,7 +1,19 @@
 
-在学习Java过程中写的代码
+# On The Road Learning Java
+---
 
-1.《Java编程思想》学习；
-2.做leetcode oj题目；
-3.学习SAMS《Java Thread Programming》；
-4. 公开课<Algorithms, Part I >Robert Sedgewick；
+
+* Reading  <Thinking In Java,4e>
+
+* Reading <Java Thread Programming>
+
+* Reading <Effective Java>
+
+* Play LeetCode 
+
+* [<Algorithms, 4e> Robert Sedgewick](http://algs4.cs.princeton.edu/home/);
+
+* Java Language Basics, and under the hood
+
+
+

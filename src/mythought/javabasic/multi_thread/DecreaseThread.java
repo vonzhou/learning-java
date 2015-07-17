@@ -1,4 +1,4 @@
-package multi_thread;
+package mythought.javabasic.multi_thread;
 
 public class DecreaseThread extends Thread{
 	private Sample sample;

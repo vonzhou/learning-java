@@ -1,4 +1,4 @@
-package multi_thread;
+package mythought.javabasic.multi_thread;
 
 public class ThreadTest3 {
 	public static void main(String[] args) {
