@@ -1,5 +1,5 @@
 //P172
-vonzhou@CHOWN:~/GitHub/JavaProject/learning-java/bin/jvm/chapter6$ javap -verbose TestClass.class 
+$ javap -verbose TestClass.class 
 Classfile /home/vonzhou/GitHub/JavaProject/learning-java/bin/jvm/chapter6/TestClass.class
   Last modified Apr 29, 2015; size 379 bytes
   MD5 checksum 70a67e773b621619d03f9d1b5ac91af6
@@ -43,7 +43,7 @@ Constant pool:
         line 3: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-               0       5     0  this   Ljvm/chapter6/TestClass;
+        0       5       0    this   Ljvm/chapter6/TestClass;
 
   public int inc();
     flags: ACC_PUBLIC
@@ -58,5 +58,5 @@ Constant pool:
         line 6: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-               0       7     0  this   Ljvm/chapter6/TestClass;
+         0       7      0     this   Ljvm/chapter6/TestClass;
 }
