@@ -3,9 +3,6 @@ package oj.huawei;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/*
- * http://stackoverflow.com/questions/225337/how-do-i-split-a-string-with-any-whitespace-chars-as-delimiters
- */
 public class LastWordLength{
 	public static void main(String args[]){
 		Scanner scan = new Scanner(System.in);
@@ -25,3 +22,7 @@ public class LastWordLength{
 		System.out.println(res);
 	}
 }
+
+/*
+ * http://stackoverflow.com/questions/225337/how-do-i-split-a-string-with-any-whitespace-chars-as-delimiters
+ */
