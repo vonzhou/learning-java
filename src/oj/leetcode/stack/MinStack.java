@@ -1,7 +1,7 @@
 package oj.leetcode.stack;
 
 
-import algrithm.sedgewick.stack.Stack;
+import java.util.Stack;
 
 /*
  * Design a stack that supports push, pop, top, and retrieving the 
@@ -11,19 +11,19 @@ import algrithm.sedgewick.stack.Stack;
  * top() -- Get the top element.
  * getMin() -- Retrieve the minimum element in the stack.
  * 
- * 1. Èç¹ûÃ¿´ÎpushµÄÊ±ºòÎ¬»¤ÓĞĞòÊıÁĞ ÕâÊÇ·ñËğ»µÁËÕ»µÄĞÔÖÊ£¿Ö»±£Ö¤getMinÊÇ³£ÊıÊ±¼ä¸´ÔÓ¶È£¿
- * 2.ÇÉÃîµÄ·½·¨ÊÇ ÀûÓÃ Á½¸öÕ»£¬ÓÃÆäÖĞÒ»¸öÕ»±£´æÕâ¶ÎÊ±¼äµÄ×îĞ¡Öµ
- * Õ»¿ÕµÄÊ±ºòÔõÃ´´¦Àí£¿²»ÄÜÅ×³öÒì³££¬cannot find symbol: class NoSuchElementException
- * ËùÒÔ²»ÓÃ´¦Àí£¬ÈÃµ×²ãµÄStackÀ´´¦ÀíÒì³£¡£
+ * 1. ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½pushï¿½ï¿½Ê±ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½Ö»ï¿½ï¿½Ö¤getMinï¿½Ç³ï¿½ï¿½ï¿½Ê±ï¿½ä¸´ï¿½Ó¶È£ï¿½
+ * 2.ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡Öµ
+ * Õ»ï¿½Õµï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×³ï¿½ï¿½ì³£ï¿½ï¿½cannot find symbol: class NoSuchElementException
+ * ï¿½ï¿½ï¿½Ô²ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ãµ×²ï¿½ï¿½Stackï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½
  * 
- * Ïà¹ØÌâÄ¿£º¹È¸èÃæÊÔÌâ - 
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - 
  * Design a queue that supports push_rear, pop_front, and get_min in O(1). 
  * Would that be elegantly possible too?
  * 
- * Ïà¹ØÌâÄ¿ -  Sliding Window Maximum
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ -  Sliding Window Maximum
  */
 public class MinStack {
-	//ÕâÀïÓÃµÄÊÇStackµ±È»¿ÉÒÔÓÃÆäËûÊı¾İ½á¹¹
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½Stackï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ½á¹¹
 	Stack<Integer> storage = new Stack<Integer>();
 	Stack<Integer> currentMinStack = new Stack<Integer>();
 	
@@ -32,7 +32,7 @@ public class MinStack {
 			//storage.push(x);
 			currentMinStack.push(x);
 		}
-		//×¢Òâ×Ü»áÖ´ĞĞ ÕâÀï ¾ÍÒòÎªÉÏÃæÄÇ¸öÊ§Îó  µ¼ÖÂ´íÎó Runtime Error
+		//×¢ï¿½ï¿½ï¿½Ü»ï¿½Ö´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½Ê§ï¿½ï¿½  ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ Runtime Error
 		storage.push(x);
 	}
 
@@ -87,18 +87,18 @@ public class MinStack {
 	}
 }
 /*
- ´ğ°¸½ÒÏş£º
+ ï¿½ğ°¸½ï¿½ï¿½ï¿½ï¿½ï¿½
 Consider space-time tradeoff. 
 How would you keep track of the minimums using extra space?
 Make sure to consider duplicate elements.
 
-O(n) runtime, O(n) space ¨C Extra stack:
+O(n) runtime, O(n) space ï¿½C Extra stack:
 
 Use an extra stack to keep track of the current minimum value. 
 During the push operation we choose the new element or the current minimum, 
 whichever that is smaller to push onto the min stack.
 
-O(n) runtime, O(n) space ¨C Minor space optimization:
+O(n) runtime, O(n) space ï¿½C Minor space optimization:
 
 If a new element is larger than the current minimum, 
 we do not need to push it on to the min stack. When we perform 
