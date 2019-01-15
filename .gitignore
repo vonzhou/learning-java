@@ -2,5 +2,6 @@
 bin/
 .classpath
 .project
+target/
 
 *.csv

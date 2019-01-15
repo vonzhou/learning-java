@@ -1,5 +1,7 @@
 package oj.leetcode.array;
 
+import oj.leetcode.Util;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -8,68 +10,67 @@ import java.util.Set;
 /*
  * Given an array of integers, find two numbers such that they add up
  *  to a specific target number.
- *  The function twoSum should return indices of the two numbers 
- *  such that they add up to the target, where index1 must be less than index2. 
+ *  The function twoSum should return indices of the two numbers
+ *  such that they add up to the target, where index1 must be less than index2.
  *  Please note that your returned answers (both index1 and index2) are not zero-based.
- *  
+ *
  *  You may assume that each input would have exactly one solution.
  *  Input: numbers={2, 7, 11, 15}, target=9
  *  Output: index1=1, index2=2
- *  
- *  
+ *
+ *
  */
 public class TwoSum {
-	//1. ×î×ÔÈ»µÄ·½·¨   O(n^2)
-	public int[] twoSum1(int[] numbers, int target) {
-		if(numbers == null || numbers.length <= 1)
-			return null;
-		int idx1=0,idx2=0;
-		labelA:// Ö¸¶¨±êÇ©£¬Ìø³ö×îÍâ²ãÑ­»·
-			for(idx1 = 0; idx1 < numbers.length-1; idx1++)
-				for(idx2 = idx1 + 1; idx2 < numbers.length; idx2 ++){
-					if((numbers[idx1] + numbers[idx2]) == target)
-						break labelA;
-					}
-		
-		if(idx2 >= numbers.length)
-			return null;
-		
-		return new int[]{idx1+1,idx2+1};
-	}
-	
-	// 2. »»Ò»¸ö½Ç¶È¿´ÎÊÌâ£¬±éÀúµ½x£¬¿´sum - x ÊÇ·ñ´æÔÚ£¬¾Í»áÏëµ½ÀûÓÃ¹şÏ£±í
-	//ÌØ±ğ×¢ÒâµÄÊÇ´¦ÀíÖØ¸´ÔªËØµÄÇé¿ö£¬ËùÒÔ²»ÄÜÏÈÈ«²¿hash½øÈ¥£¬ÔÙ²éÕÒ£¬¶øÊÇ¶¯Ì¬ÅĞ¶¨
-	public int[] twoSum(int[] numbers, int target) {
-		if(numbers == null || numbers.length <= 1)
-			return null;
-		
-		Map<Integer,Integer> map = new HashMap<Integer,Integer>();
-		for(int i = 0; i < numbers.length; i++){
-			if(map.containsKey(numbers[i])){
-				int a = map.get(numbers[i])+1;
-				int b = i + 1;
-				return new int[]{a, b};
-			}else{
-				map.put(target - numbers[i], i);
-			}
-		}
-		
-		return null;
-	}
-	
-	
-	public static void main(String[] args) {
-		// ²âÊÔMapÖĞ¶ÔÖØ¸´ÔªËØµÄ´¦Àí
-		Map<Integer,Integer> map = new HashMap<Integer,Integer>();
-		map.put(1, 100);
-		map.put(1, 1000);
-		map.put(3, 400);
-		Set<Integer> keys = map.keySet();
-		System.out.println(keys);
-	}
-	
-	
-	
+    //AC
+    //1. æœ€è‡ªç„¶çš„æ–¹æ³•   O(n^2)
+    public int[] twoSum1(int[] numbers, int target) {
+        if (numbers == null || numbers.length <= 1)
+            return null;
+        int idx1 = 0, idx2 = 0;
+        labelA:
+        // æŒ‡å®šæ ‡ç­¾ï¼Œè·³å‡ºæœ€å¤–å±‚å¾ªç¯
+        for (idx1 = 0; idx1 < numbers.length - 1; idx1++)
+            for (idx2 = idx1 + 1; idx2 < numbers.length; idx2++) {
+                if ((numbers[idx1] + numbers[idx2]) == target)
+                    break labelA;
+            }
+
+        if (idx2 >= numbers.length)
+            return null;
+
+        return new int[]{idx1 + 1, idx2 + 1};
+    }
+
+    //AC
+    // 2. æ¢ä¸€ä¸ªè§’åº¦çœ‹é—®é¢˜ï¼Œéå†åˆ°xï¼Œçœ‹sum - x æ˜¯å¦å­˜åœ¨ï¼Œå°±ä¼šæƒ³åˆ°åˆ©ç”¨å“ˆå¸Œè¡¨
+    //ç‰¹åˆ«æ³¨æ„çš„æ˜¯å¤„ç†é‡å¤å…ƒç´ çš„æƒ…å†µï¼Œæ‰€ä»¥ä¸èƒ½å…ˆå…¨éƒ¨hashè¿›å»ï¼Œå†æŸ¥æ‰¾ï¼Œè€Œæ˜¯åŠ¨æ€åˆ¤å®š
+    public int[] twoSum(int[] numbers, int target) {
+        if (numbers == null || numbers.length <= 1)
+            return null;
+
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i = 0; i < numbers.length; i++) {
+            if (map.containsKey(numbers[i])) {
+                int a = map.get(numbers[i]) + 1;
+                int b = i + 1;
+                return new int[]{a, b};
+            } else {
+                map.put(target - numbers[i], i);
+            }
+        }
+
+        return null;
+    }
+
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{2, 7, 11, 15};
+        int target = 9;
+        int[] res = new TwoSum().twoSum(nums, target);
+        Util.printArr(res);
+    }
+
+
 }
 
 
