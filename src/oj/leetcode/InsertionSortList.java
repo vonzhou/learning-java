@@ -1,4 +1,5 @@
-package oj.leetcode.linklist;
+package oj.leetcode;
+
 
 
 /**
@@ -26,12 +27,12 @@ public class InsertionSortList {
 		System.out.println();
 	}
 
-	// 没有头节点，处理起来复杂
+	// 没锟斤拷头锟节点，锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
 	public static ListNode insertionSortList2(ListNode head) {
 		if(head == null || head.next == null)
 			return head;
 		ListNode p = head.next;
-		ListNode list = head; // construct a new list 
+		ListNode list = head; // construct a new list
 		list.next = null;
 		ListNode lo = list, pre = list;
 		
@@ -55,7 +56,7 @@ public class InsertionSortList {
 	}
 	
 	public static ListNode insertionSortList(ListNode head) {
-		ListNode list = new ListNode(0);  //头节点
+		ListNode list = new ListNode(0);  //头锟节碉拷
 		while(head != null){
 			ListNode node = list;
 			while(node.next != null && node.next.val < head.val)

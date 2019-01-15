@@ -1,10 +1,7 @@
-package oj.leetcode.array;
-
-import oj.leetcode.Util;
+package oj.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 
 /*

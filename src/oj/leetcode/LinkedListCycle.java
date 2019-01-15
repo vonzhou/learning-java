@@ -1,11 +1,12 @@
-package oj.leetcode.linklist;
+package oj.leetcode;
+
 
 /*
  * Given a linked list, determine if it has a cycle in it.
  * Follow up:
  * Can you solve it without using extra space?
  * 
- * Á©Ö¸Õë£¬Èç¹ûÓĞÏàÓöÔòÑ­»·£¬·ñÔòÖÕÖ¹Ìõ¼şÊÇÓöµ½Á´±íÎ²
+ * ï¿½ï¿½Ö¸ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î²
  */
 public class LinkedListCycle {
 	public boolean hasCycle(ListNode head) {

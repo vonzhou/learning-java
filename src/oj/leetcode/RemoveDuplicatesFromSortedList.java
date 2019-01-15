@@ -1,4 +1,4 @@
-package oj.leetcode.linklist;
+package oj.leetcode;
 
 
 /*
@@ -7,6 +7,7 @@ package oj.leetcode.linklist;
  * Given 1->1->2, return 1->2.
  * Given 1->1->2->3->3, return 1->2->3.
  */
+
 
 public class RemoveDuplicatesFromSortedList {
 	
@@ -30,7 +31,7 @@ public class RemoveDuplicatesFromSortedList {
 		System.out.println();
 	}
 	
-	// µü´ú£¬Ò»¶¨Òª×¢Òâ¼ì²é±ß½çÌõ¼þ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Òª×¢ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static ListNode deleteDuplicates(ListNode head) {
 		ListNode p = head, q;
 		if(p == null || p.next == null)
@@ -49,7 +50,7 @@ public class RemoveDuplicatesFromSortedList {
 		return head;
 	}
 	/*
-	// µÝ¹éÊµÏÖ   -- ÓÐÎÊÌâ
+	// ï¿½Ý¹ï¿½Êµï¿½ï¿½   -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static ListNode deleteDuplicates2(ListNode head) {
 		if(head == null || head.next == null)
 			return head;

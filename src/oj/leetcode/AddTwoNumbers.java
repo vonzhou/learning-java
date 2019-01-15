@@ -1,4 +1,4 @@
-package oj.leetcode.linklist;
+package oj.leetcode;
 
 /**
  * https://leetcode.com/problems/add-two-numbers/

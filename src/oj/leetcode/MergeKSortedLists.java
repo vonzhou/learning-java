@@ -1,4 +1,5 @@
-package oj.leetcode.linklist;
+package oj.leetcode;
+
 
 /**
  * 23. Merge k Sorted Lists

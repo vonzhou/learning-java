@@ -1,4 +1,6 @@
-package oj.leetcode.linklist;
+package oj.leetcode;
+
+import *;
 
 /*
  * Given a linked list, return the node where the cycle begins. 
@@ -6,7 +8,7 @@ package oj.leetcode.linklist;
  * Follow up:
  * Can you solve it without using extra space?
  * 
- * ¹Ø¼üÊÇÕÒµ½ÄÇ¸öÁ´±í½¹µã
+ * ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class LinkedListCycleII {
 	public ListNode detectCycle(ListNode head) {
@@ -23,9 +25,9 @@ public class LinkedListCycleII {
 		}
 		
 		if(slow != fast)
-			return null;// ²»´æÔÚ»·
+			return null;// ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½
 		
-		// ·Ö±ð´Ó¿ªÍ· ºÍ ÏàÓöµã¼ÌÐøÒÆ¶¯ ÔÙ´ÎÏàÓöµÄÊ±ºò¾ÍÊÇÈë¿Úµã£¬ Ö¤Ã÷¹ý³ÌÓÐ´ýÑÐ¾¿
+		// ï¿½Ö±ï¿½Ó¿ï¿½Í· ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ ï¿½Ù´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµã£¬ Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½Ð¾ï¿½
 		ListNode l1 = head, l2 = slow;
 		while(l1 != l2){
 			l1 = l1.next;

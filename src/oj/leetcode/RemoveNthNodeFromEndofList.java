@@ -1,4 +1,5 @@
-package oj.leetcode.linklist;
+package oj.leetcode;
+
 
 
 /*
@@ -8,7 +9,7 @@ package oj.leetcode.linklist;
  *
  *   After removing the second node from the end, the linked list becomes 1->2->3->5.
  *   Note:
- *   Given n will always be valid.  ²»ÓÃÅÐ¶ÏnµÄÓÐÐ§ÐÔ??
+ *   Given n will always be valid.  ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½nï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½??
  *   Try to do this in one pass.
  */
 public class RemoveNthNodeFromEndofList {
