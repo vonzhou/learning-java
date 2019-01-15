@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 /*
  * Validate if a given string is numeric.
@@ -11,18 +11,18 @@ package oj.leetcode.string;
  Note: It is intended for the problem statement to be ambiguous. 
  You should gather all requirements up front before implementing one.
  
- Ìá½»ÁË10´Î ÖÕÓÚACÁË
+ ï¿½á½»ï¿½ï¿½10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ACï¿½ï¿½
  */
 public class ValidNumber {
 	public boolean isNumber(String s) {
 		if(s == null || s.equals(""))
 			return false;
 		
-		s = s.trim();// ¿ªÍ·½áÎ²µÄ¿Õ°×³ıÈ¥
+		s = s.trim();// ï¿½ï¿½Í·ï¿½ï¿½Î²ï¿½Ä¿Õ°×³ï¿½È¥
 		if(s.equals(""))
 			return false;
 		
-		// ·ûºÅµÄ´¦Àí
+		// ï¿½ï¿½ï¿½ÅµÄ´ï¿½ï¿½ï¿½
 		char first = s.charAt(0);
 		if((first >= '0' && first <= '9') || first == '.')
 			return isPureNumber(s);
@@ -40,7 +40,7 @@ public class ValidNumber {
 	
 	
 	
-	// ¿ÆÑ§¼ÆÊı·¨£¬ÒÔeÎª±ß½ç
+	// ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eÎªï¿½ß½ï¿½
 	private boolean isScientific(String s) {
 		if(! s.contains("e"))
 			return false;
@@ -50,7 +50,7 @@ public class ValidNumber {
 		
 		String left = s.substring(0,i);
 		String right = s.substring(i+1, s.length());
-		// Ö¸Êı¿ÉÒÔ´øÕı¸º
+		// Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½
 		if(right.length() == 1)
 			return (isDouble(left)||isInteger(left)) && isInteger(right);
 		

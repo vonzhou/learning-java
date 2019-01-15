@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 /*
  * Compare two version numbers version1 and version2.
@@ -10,7 +10,7 @@ package oj.leetcode.string;
  * Here is an example of version numbers ordering:
  * 0.1 < 1.1 < 1.2 < 13.37
  * 
- * ÌØÊâÓÃÀýÓÐ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 1) "0" "1"
  * 2) "01" "1"  
  * 3)Input:	"1.2", "1.10" Output:	1   Expected:	-1
@@ -20,10 +20,10 @@ package oj.leetcode.string;
 public class CompareVersionNumbers {
 
 	/*
-	 * 0. ÏÈ±È½ÏÖ÷°æ±¾ºÅ XXX Ã»ÓÐÀí½âÌâÄ¿£¬Ë¼Â·´íÎó
+	 * 0. ï¿½È±È½ï¿½ï¿½ï¿½ï¿½æ±¾ï¿½ï¿½ XXX Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ë¼Â·ï¿½ï¿½ï¿½ï¿½
 	 */
 	public int compareVersionWrong(String version1, String version2) {
-		// ÊÇ·ñÐèÒªÑéÖ¤²ÎÊýÓÐÐ§ÐÔ£¿
+		// ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ô£ï¿½
 
 		int k1 = version1.indexOf('.');
 		int k2 = version2.indexOf('.');
@@ -31,7 +31,7 @@ public class CompareVersionNumbers {
 		// System.out.println(k1 + ":" + k2);
 		v1a = k1 != -1 ? version1.substring(0, k1) : version1 + "";
 		v2a = k2 != -1 ? version2.substring(0, k2) : version2 + "";
-		// Ïû³ý¿ªÍ·µÄ0, ¶ÔÓÚ´Î°æ±¾ºÅ²»ÐèÒªÕâÖÖ´¦Àí
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½0, ï¿½ï¿½ï¿½Ú´Î°æ±¾ï¿½Å²ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½
 		// System.out.println(v1a + ":" + v2a);
 		int res = Integer.parseInt(v1a) - Integer.parseInt(v2a);
 
@@ -52,8 +52,8 @@ public class CompareVersionNumbers {
 	}
 
 	/*
-	 * 1. ·Ö¸ô³É¶à¸öÕûÐÎÊý×é£¬¶øºó¶ÔÆë£¬ÒÀ´Î½øÐÐ±È½Ï
-	 * °´ÕÕÕâ¸öË¼Â·Ò»´ÎÐÔAccept !!
+	 * 1. ï¿½Ö¸ï¿½ï¿½É¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½Î½ï¿½ï¿½Ð±È½ï¿½
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼Â·Ò»ï¿½ï¿½ï¿½ï¿½Accept !!
 	 */
 	public int compareVersion(String version1, String version2) {
 		String[] arr1 = version1.split("\\.");
@@ -87,7 +87,7 @@ public class CompareVersionNumbers {
 		return res;
 	}
 	
-	// ÓÃµÝ¹éÄÄÀï³öÁËÎÊÌâ £¿£¿£¿£¿£¿XXX
+	// ï¿½ÃµÝ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½XXX
 	public int compareIntArr2(int[] a, int[] b, int from) {
 		int res = a[from] - b[from];
 		System.out.println(res);

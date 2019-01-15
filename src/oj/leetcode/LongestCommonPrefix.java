@@ -1,9 +1,9 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 /*
  * Write a function to find the longest common prefix 
  * string amongst an array of strings.
- * Ê±¼ä¸´ÔÓ¶ÈÊÇ O(nm) vs Ê¹ÓÃ Trie Ê÷
+ * Ê±ï¿½ä¸´ï¿½Ó¶ï¿½ï¿½ï¿½ O(nm) vs Ê¹ï¿½ï¿½ Trie ï¿½ï¿½
  */
 public class LongestCommonPrefix {
 	
@@ -13,7 +13,7 @@ public class LongestCommonPrefix {
 	public static String longestCommonPrefix(String[] strs) {
 		if(strs == null || strs.length == 0)
 			return "";
-		// ¿ÕÊý×éÒªµ¥¶À¿¼ÂÇ strs = {};
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ strs = {};
 		if(strs.length == 1)
 			return strs[0];
 		
@@ -24,7 +24,7 @@ public class LongestCommonPrefix {
 				min = s.length();
 		if(min == 0)
 			return "";
-		//ÔÙ´ÎÇ¿µ÷breakÖ»ÄÜÖÐ¶ÏÒ»²ãÑ­»·
+		//ï¿½Ù´ï¿½Ç¿ï¿½ï¿½breakÖ»ï¿½ï¿½ï¿½Ð¶ï¿½Ò»ï¿½ï¿½Ñ­ï¿½ï¿½
 		int i=0;
 		loop:
 		for(i=0; i < min; i++){

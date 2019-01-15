@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 /*
  * Given a string, determine if it is a palindrome, considering only alphanumeric
@@ -19,7 +19,7 @@ public class ValidPalindrome {
 		if(s == null)
 			return false;
 		s = s.replace(" ", "");
-		// ¿Õ´®ÊÇ»ØÎÄ
+		// ï¿½Õ´ï¿½ï¿½Ç»ï¿½ï¿½ï¿½
 		if(s.equals(""))
 			return true;
 		

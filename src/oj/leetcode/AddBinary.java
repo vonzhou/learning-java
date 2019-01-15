@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 /*
  * Given two binary strings, return their sum (also a binary string).
@@ -7,8 +7,8 @@ package oj.leetcode.string;
  * a = "11"
  * b = "1"
  * Return "100"
- * 1. ºÜ×ÔÈ»µÄÏëµ½ÓÃPlus OneÖĞµÄË¼Â·£¬ÓÃÒ»¸öÊı×é´ú±í²»Í¬µÄÎ»,¿Õ¼ä¿ªÏúÊÇ²»ÊÇÌ«´ó£¿
- * 2. Ö±½ÓÓÃStringBuilder¹¹Ôì,ÕâÀï¼ÙÉèÊäÈëµÄÊÇºÏ·¨µÄ
+ * 1. ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½Plus Oneï¿½Ğµï¿½Ë¼Â·ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Î»,ï¿½Õ¼ä¿ªï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Ì«ï¿½ï¿½
+ * 2. Ö±ï¿½ï¿½ï¿½ï¿½StringBuilderï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÇºÏ·ï¿½ï¿½ï¿½
  * 
  */
 public class AddBinary {
@@ -25,7 +25,7 @@ public class AddBinary {
 		int i = lena -1, j = lenb -1;
 		int carry = 0; 
 		StringBuilder res = new StringBuilder();
-		// ´ÓºóÍùÇ°ÍÆ½ø
+		// ï¿½Óºï¿½ï¿½ï¿½Ç°ï¿½Æ½ï¿½
 		while(i >= 0 && j >= 0){
 			int inta = a.charAt(i) - '0';
 			int intb = b.charAt(j) - '0';
@@ -68,7 +68,7 @@ public class AddBinary {
 			
 			j--;
 		}
-		// µÚÒ»´ÎÌá½»´íÔÚÕâÀï  ·Ç0 µÄ»°²Å²åÈë½øÎ»Öµ£¬·ñÔòµÄ»°  ³öÏÖ" 00"
+		// ï¿½ï¿½Ò»ï¿½ï¿½ï¿½á½»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½0 ï¿½Ä»ï¿½ï¿½Å²ï¿½ï¿½ï¿½ï¿½Î»Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½  ï¿½ï¿½ï¿½ï¿½" 00"
 		if(carry == 1)
 			res.insert(0, carry);
 		

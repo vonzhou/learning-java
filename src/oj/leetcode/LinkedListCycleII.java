@@ -1,6 +1,5 @@
 package oj.leetcode;
 
-import *;
 
 /*
  * Given a linked list, return the node where the cycle begins. 
@@ -8,7 +7,7 @@ import *;
  * Follow up:
  * Can you solve it without using extra space?
  * 
- * �ؼ����ҵ��Ǹ�������
+ * 锟截硷拷锟斤拷锟揭碉拷锟角革拷锟斤拷锟斤拷锟斤拷
  */
 public class LinkedListCycleII {
 	public ListNode detectCycle(ListNode head) {
@@ -25,9 +24,9 @@ public class LinkedListCycleII {
 		}
 		
 		if(slow != fast)
-			return null;// �����ڻ�
+			return null;// 锟斤拷锟斤拷锟节伙拷
 		
-		// �ֱ�ӿ�ͷ �� ����������ƶ� �ٴ�������ʱ�������ڵ㣬 ֤�������д��о�
+		// 锟街憋拷涌锟酵� 锟斤拷 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷贫锟� 锟劫达拷锟斤拷锟斤拷锟斤拷时锟斤拷锟斤拷锟斤拷锟节点， 证锟斤拷锟斤拷锟斤拷锟叫达拷锟叫撅拷
 		ListNode l1 = head, l2 = slow;
 		while(l1 != l2){
 			l1 = l1.next;

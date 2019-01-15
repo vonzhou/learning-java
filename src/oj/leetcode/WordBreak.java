@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 import java.util.Set;
 

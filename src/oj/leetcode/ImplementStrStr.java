@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 /*
  * Implement strStr().
@@ -10,8 +10,8 @@ package oj.leetcode.string;
  *   please click the reload button  to reset your code definition.
  */
 public class ImplementStrStr {
-	//¸É²Ý¶Ñ£¬Õë
-	//1. ×îÖ±½ÓµÄ·½Ê½£¬Òª×¢ÒâµÄÊÇ±ß½çÌõ¼þµÄ´¦Àí Èç "",""·µ»ØÊ±0£¬¶ø²»ÊÇ-1 
+	//ï¿½É²Ý¶Ñ£ï¿½ï¿½ï¿½
+	//1. ï¿½ï¿½Ö±ï¿½ÓµÄ·ï¿½Ê½ï¿½ï¿½Òª×¢ï¿½ï¿½ï¿½ï¿½Ç±ß½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ ï¿½ï¿½ "",""ï¿½ï¿½ï¿½ï¿½Ê±0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-1 
 	public  int strStr1(String haystack, String needle) {
 		if(haystack == null || needle == null)
 			return -1;
@@ -21,7 +21,7 @@ public class ImplementStrStr {
 		if(sublen > len)
 			return -1;
 		
-		// ¿Õ×Ö·û´®µ¥¶À´¦Àí
+		// ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if(haystack.length() == 0 || needle.length() == 0)
 			return 0;
 		

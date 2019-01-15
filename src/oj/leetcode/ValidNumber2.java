@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 /*
  * Validate if a given string is numeric.
@@ -10,31 +10,31 @@ package oj.leetcode.string;
  "2e10" => true
  Note: It is intended for the problem statement to be ambiguous. 
  You should gather all requirements up front before implementing one.
- ½øÐÐÖØ¹¹£¬ÀíÇåË¼Â·£¬¶ø²»ÊÇ´¿´âÎªÁËµÃµ½½á¹û¡£
+ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½Îªï¿½ËµÃµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class ValidNumber2 {
 	public boolean isNumber(String s) {
 		if (s == null || s.equals(""))
 			return false;
 
-		s = s.trim();// ¿ªÍ·½áÎ²µÄ¿Õ°×³ýÈ¥
+		s = s.trim();// ï¿½ï¿½Í·ï¿½ï¿½Î²ï¿½Ä¿Õ°×³ï¿½È¥
 		if (s.equals(""))
 			return false;
 
 		return isInteger(s) || isDouble(s) || isScientific(s);
 	}
 
-	// ¿ÆÑ§¼ÆÊý·¨£¬e ºÍ E ¶¼ÊÇºÏ·¨µÄ
+	// ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½e ï¿½ï¿½ E ï¿½ï¿½ï¿½ÇºÏ·ï¿½ï¿½ï¿½
 	public boolean isScientific(String s) {
 		if (!(s.contains("e") || s.contains("E")))
 			return false;
-		// °üº¬¶à¸ö eÒ²ÊÇ²»ÐÐµÄ 
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ eÒ²ï¿½Ç²ï¿½ï¿½Ðµï¿½ 
 		int j = s.indexOf('E');
 		int i = s.indexOf('e');
 		if(j != -1)
 			i = j;
 		
-		// e ÔÚ×îºó
+		// e ï¿½ï¿½ï¿½ï¿½ï¿½
 		if (i >= (s.length() - 1))
 			return false;
 
@@ -47,20 +47,20 @@ public class ValidNumber2 {
 				&& isInteger(right);
 	}
 
-	// ¸¡µãÊý 
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 	public boolean isDouble(String s) {
 		if (!s.contains("."))
 			return false;
 		int i = s.indexOf('.');
 
 		String left = s.substring(0, i);
-		// Èç¹ûÐ¡ÊýµãÔÚ×îºóµÄ»°£¬·µ»ØµÄÊÇ¿Õ´® ¶Ô¸¡µãÊýÀ´Ëµ ÊÇ¿ÉÒÔµÄ
+		// ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½Ç¿Õ´ï¿½ ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµ ï¿½Ç¿ï¿½ï¿½Ôµï¿½
 		String right = s.substring(i + 1, s.length());
 		boolean b1 = false;
 		boolean b2 = false;
-		boolean flag = false;  // ×óÓÒÁ½±ß²»ÄÜÍ¬Ê±Îª¿Õ
+		boolean flag = false;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß²ï¿½ï¿½ï¿½Í¬Ê±Îªï¿½ï¿½
 		
-		if(left.length() <= 1){// ¶ÔÖ»ÓÐÒ»¸ö×Ö·ûµÄÇé¿öµ¥¶À¿¼ÂÇ
+		if(left.length() <= 1){// ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(left.equals("")) {
 				b1 = true;
 				flag = true;
@@ -81,11 +81,11 @@ public class ValidNumber2 {
 		return b1 && b2;
 	}
 
-	// ¿¼ÂÇ¿ªÍ·µÄÕý¸ººÅ
+	// ï¿½ï¿½ï¿½Ç¿ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public boolean isInteger(String s) {
 		if (s.equals(""))
 			return false;
-		// ·ûºÅµÄ´¦Àí
+		// ï¿½ï¿½ï¿½ÅµÄ´ï¿½ï¿½ï¿½
 		char first = s.charAt(0);
 		if ((first >= '0' && first <= '9'))
 			return isUnsignedInteger(s);
@@ -97,7 +97,7 @@ public class ValidNumber2 {
 		return false;
 	}
 
-	// ²»´ø·ûºÅµÄÕûÊý
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½
 	private boolean isUnsignedInteger(String s) {
 
 		if (s.equals(""))
@@ -110,7 +110,7 @@ public class ValidNumber2 {
 		return true;
 	}
 
-	// ÊÇÊý×Ö
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private boolean isDigit(char c) {
 		if (c >= '0' && c <= '9')
 			return true;
@@ -120,7 +120,7 @@ public class ValidNumber2 {
 	public static void main(String[] args) {
 		ValidNumber2 vn = new ValidNumber2();
 		String s = ".";
-		System.out.println(s.substring(1, 1)); // »á·µ»Ø¿Õ´®  
+		System.out.println(s.substring(1, 1)); // ï¿½á·µï¿½Ø¿Õ´ï¿½  
 		System.out.println(3.);
 		System.out.println(0.);
 		System.out.println(.1);

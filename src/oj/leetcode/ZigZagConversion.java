@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 
 /*
@@ -14,7 +14,7 @@ Write the code that will take a string and make this conversion given a number o
 string convert(string text, int nRows);
 convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
  * 
- * ÕÒ¹æÂÉµÄÌâÄ¿ 
+ * ï¿½Ò¹ï¿½ï¿½Éµï¿½ï¿½ï¿½Ä¿ 
  */
 public class ZigZagConversion {
 	public String convert(String s, int nRows) {
@@ -43,7 +43,7 @@ public class ZigZagConversion {
 				levels[nRows-j-1] += s.charAt(i+nRows+j-1) + "";
 		}
 		
-		// ´¦ÀíÊ£ÓàµÄÔªËØ
+		// ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 		if(remain <= nRows){
 			for(int j = 0; j < remain; j++)
 				levels[j] += s.charAt(i++) + "";

@@ -1,4 +1,4 @@
-package oj.leetcode.string;
+package oj.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,9 +17,9 @@ import java.util.Map;
 public class EditDistance {
 
 	/***********************************************************
-	 * 1.¿´Çå³þ×ÓÎÊÌâµÄÐÎ³É 1)°ÑA[0]Ìæ»»ÎªB[0]Èç¹û¶þÕß²»Í¬µÄ»°£¬È»ºóÇóeditDistance(A[1..n], B[1...m])
-	 * 2)°ÑA[0]É¾³ý È»ºóÇóeditDistance(A[1..n], B[0...m]) 3)ÔÚAÖÐÍ·²åÈçB[0]
-	 * È»ºóÇóeditDistance(A[1..n], B[0...m]) È¥ÉÏÃæµÄ×îÐ¡Öµ£¬µÝ¹éµÄÖÕÖ¹Ìõ¼þÊÇA»òBÎª¿ÕÎªÖ¹
+	 * 1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î³ï¿½ 1)ï¿½ï¿½A[0]ï¿½æ»»ÎªB[0]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß²ï¿½Í¬ï¿½Ä»ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½editDistance(A[1..n], B[1...m])
+	 * 2)ï¿½ï¿½A[0]É¾ï¿½ï¿½ È»ï¿½ï¿½ï¿½ï¿½editDistance(A[1..n], B[0...m]) 3)ï¿½ï¿½Aï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½B[0]
+	 * È»ï¿½ï¿½ï¿½ï¿½editDistance(A[1..n], B[0...m]) È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Öµï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½BÎªï¿½ï¿½ÎªÖ¹
 	 * 
 	 * NB. Status: Time Limit Exceeded
 	 */
@@ -42,8 +42,8 @@ public class EditDistance {
 	
 
 	/*****************************************************
-	 * 2. ×Ô¶¥ÏòÏÂµÄ¶¯Ì¬¹æ»®
-	 * Í¬Ñù·¢ÉúÁË³¬Ê±
+	 * 2. ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ÂµÄ¶ï¿½Ì¬ï¿½æ»®
+	 * Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½Ê±
 	 */
 
 	public int minDistanceDPTopDown(String word1, String word2) {
@@ -85,7 +85,7 @@ public class EditDistance {
 	}
 
 	/**
-	 * ÏÖÔÚµÄÃ¿Ò»²½ÊÇÓÐÁ½¸östring½øÐÐµÄ ËùÒÔ¹¹ÔìÒ»¸ö¸¨ÖúÀà ½«tuple(s1,s2)×÷ÎªMapµÄkey
+	 * ï¿½ï¿½ï¿½Úµï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½stringï¿½ï¿½ï¿½Ðµï¿½ ï¿½ï¿½ï¿½Ô¹ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½tuple(s1,s2)ï¿½ï¿½ÎªMapï¿½ï¿½key
 	 *
 	 */
 	private class StringTuple {
@@ -129,15 +129,15 @@ public class EditDistance {
 		int m = word1.length();
 		int n = word2.length();
 
-	    // Cost[i][j]±íÊ¾words1.substr(0, i)µ½ words2.substr(0, j) µÄ×î¶Ì±à¼­¾àÀë
+	    // Cost[i][j]ï¿½ï¿½Ê¾words1.substr(0, i)ï¿½ï¿½ words2.substr(0, j) ï¿½ï¿½ï¿½ï¿½Ì±à¼­ï¿½ï¿½ï¿½ï¿½
 	    int[][] Cost= new int[m+1][n+1];
-	    // ³õÊ¼»¯±ß½çÇé¿ö
+	    // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ß½ï¿½ï¿½ï¿½ï¿½
 	    for (int i = 0; i <= m; ++i) 
 	    	Cost[i][0] = i;
 	    for (int j = 0; j <= n; ++j) 
 	    	Cost[0][j] = j;
 	    
-	    // ÓÉA[0...i]µ½B[0...j]µÄ×î¶Ì¾àÀë·ÖÎªÈýÖÖÇé¿ö
+	    // ï¿½ï¿½A[0...i]ï¿½ï¿½B[0...j]ï¿½ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	    for (int i = 1; i <= m; ++i) {
 	        for (int j = 1; j <= n; ++j) {
 	        	int insertBoth = Cost[i-1][j-1] + replaceCost(word1, word2,0,0);
