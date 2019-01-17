@@ -5,5 +5,5 @@ bin/
 .classpath
 .project
 target/
-
+*.iml
 *.csv
