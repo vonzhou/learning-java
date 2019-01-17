@@ -1,4 +1,4 @@
-package jvm.chapter2;
+package jvm.ch02memory;
 
 // P55
 // -Xss2M
