@@ -1,2 +1,0 @@
-
-»ØËİ·¨ Backtracking 
