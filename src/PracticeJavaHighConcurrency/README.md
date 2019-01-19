@@ -149,18 +149,13 @@ NioEchoServer
 
 ## 6. Java 8与并发
 
-6.5　增强的Future：CompletableFuture<br>
-6.5.1　完成了就通知我<br>
-6.5.2　异步执行任务<br>
-6.5.3　流式调用<br>
-6.5.4　CompletableFuture中的异常处理<br>
-6.5.5　组合多个CompletableFuture<br>
 6.6　读写锁的改进：StampedLock<br>
 6.6.1　StampedLock使用示例<br>
 6.6.2　StampedLock的小陷阱<br>
 6.6.3　有关StampedLock的实现思想<br>
 
 * 函数式编程
+* CompletableFuture
 * LongAdder 及 LongAccumulator 的实现原理
 
 

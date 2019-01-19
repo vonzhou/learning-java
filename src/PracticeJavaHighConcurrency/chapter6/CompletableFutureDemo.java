@@ -26,10 +26,10 @@ public class CompletableFutureDemo {
         @Override
         public void run() {
             try {
+                // get 会阻塞
                 System.out.println(cf.get() * cf.get());
-
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         }
     }
