@@ -3,7 +3,7 @@ package PracticeJavaHighConcurrency.chapter3;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * ������
+ * 显示的加锁,解锁
  * Created by 13 on 2017/5/5.
  */
 public class ReenterLock implements Runnable {

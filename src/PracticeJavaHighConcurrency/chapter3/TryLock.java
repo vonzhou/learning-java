@@ -18,6 +18,7 @@ public class TryLock implements Runnable {
     public void run() {
         if (lock == 1) {
             while (true) {
+                // tryLock 不会等待
                 if (lock1.tryLock()) {
                     try {
                         try {
@@ -64,13 +65,6 @@ public class TryLock implements Runnable {
         }
     }
 
-    /**
-     * ��������в����˷ǳ����������ļ���˳��,����thread1��thread2�������ľ���������ȴ��Ӷ���������
-     *
-     * ʹ����tryLock��,�̲߳���һֱ�ȴ����ǲ�ͣ�ĳ���ȥ�������Դ,ֻ��Ҫ�ȴ�һ����ʱ��,�߳����ջ�������Ҫ����Դ
-     *
-     * @param args
-     */
     public static void main(String args[]) {
         TryLock r1 = new TryLock(1);
         TryLock r2 = new TryLock(2);

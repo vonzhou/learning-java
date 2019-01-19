@@ -3,6 +3,7 @@ package PracticeJavaHighConcurrency.chapter3;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ * ReentrantLock
  * Created by 13 on 2017/5/5.
  */
 public class IntLock implements Runnable {
@@ -35,7 +36,7 @@ public class IntLock implements Runnable {
             if (lock2.isHeldByCurrentThread()) {
                 lock2.unlock();
             }
-            System.out.println(Thread.currentThread().getId() + ":�߳��˳�");
+            System.out.println(Thread.currentThread().getId() + " : thread exit");
         }
 
     }

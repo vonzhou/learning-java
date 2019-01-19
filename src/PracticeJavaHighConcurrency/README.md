@@ -54,7 +54,9 @@
 2.9　参考文献
 
 
-第3章　JDK并发包<br>
+## 3.JDK并发包
+
+
 3.1　多线程的团队协作：同步控制<br>
 3.1.1　synchronized的功能扩展：重入锁<br>
 3.1.2　重入锁的好搭档：Condition条件<br>
@@ -81,7 +83,6 @@
 3.3.5　高效读取：不变模式下的CopyOnWriteArrayList<br>
 3.3.6　数据共享通道：BlockingQueue<br>
 3.3.7　随机数据结构：跳表（SkipList）<br>
-3.4　参考资料
 
 
 第4章　锁的优化及注意事项<br>

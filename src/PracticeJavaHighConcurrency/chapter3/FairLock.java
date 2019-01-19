@@ -7,7 +7,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class FairLock implements Runnable {
 
-    public static ReentrantLock fairLock = new ReentrantLock(true);//����trueָ�����ǹ�ƽ��,Ҳ���Բ�����,�ֱ����й۲칫ƽ����ǹ�ƽ���������
+    // true 表示使用公平策略
+    public static ReentrantLock fairLock = new ReentrantLock(true);
     //public static ReentrantLock unfairLock = new ReentrantLock();
 
     @Override
@@ -16,7 +17,7 @@ public class FairLock implements Runnable {
             try {
                 fairLock.lock();
                 // unfairLock.lock();
-                System.out.println(Thread.currentThread().getName() + "�����");
+                System.out.println(Thread.currentThread().getName() + " get lock");
             } finally {
                 fairLock.unlock();
                 // unfairLock.unlock();
@@ -24,13 +25,6 @@ public class FairLock implements Runnable {
         }
     }
 
-    /**
-     * ��ƽ����һ���ص���:���������������,ֻҪ�Ŷ����ն���õ���Դ.
-     * <p/>
-     * ����ʵ�ֹ�ƽ��Ҫ��ϵͳά��һ���������,��˹�ƽ����ʵ�ֳɱ��ϸ�,������Ե���.
-     *
-     * @param args
-     */
     public static void main(String args[]) {
         FairLock r1 = new FairLock();
         Thread thread1 = new Thread(r1, "Thread_t1");

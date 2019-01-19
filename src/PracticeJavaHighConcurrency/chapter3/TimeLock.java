@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ * ReentrantLock 设置超时时间
  * Created by 13 on 2017/5/5.
  */
 public class TimeLock implements Runnable {
@@ -29,10 +30,6 @@ public class TimeLock implements Runnable {
         }
     }
 
-    /**
-     * ������ȴ���ʱtryLock
-     * @param args
-     */
     public static void main(String args[]) {
         TimeLock timeLock = new TimeLock();
         Thread thread1 = new Thread(timeLock);
