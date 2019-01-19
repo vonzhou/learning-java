@@ -2,8 +2,6 @@
 
 
 
-## 目录
-
 第1章　走入并行世界<br>
 1.1　何去何从的并行计算<br>
 1.1.1　忘掉那该死的并行<br>
@@ -149,24 +147,8 @@ MultiThreadEchoServer, EchoClient
 NioEchoServer
 
 
-第6章　Java<br>8与并发<br>
-6.1　Java<br>8的函数式编程简介<br>
-6.1.1　函数作为一等公民<br>
-6.1.2　无副作用<br>
-6.1.3　申明式的（Declarative）<br>
-6.1.4　不变的对象<br>
-6.1.5　易于并行<br>
-6.1.6　更少的代码<br>
-6.2　函数式编程基础<br>
-6.2.1　FunctionalInterface注释<br>
-6.2.2　接口默认方法<br>
-6.2.3　lambda表达式<br>
-6.2.4　方法引用<br>
-6.3　一步一步走入函数式编程<br>
-6.4　并行流与并行排序<br>
-6.4.1　使用并行流过滤数据<br>
-6.4.2　从集合得到并行流<br>
-6.4.3　并行排序<br>
+## 6. Java 8与并发
+
 6.5　增强的Future：CompletableFuture<br>
 6.5.1　完成了就通知我<br>
 6.5.2　异步执行任务<br>
@@ -177,11 +159,9 @@ NioEchoServer
 6.6.1　StampedLock使用示例<br>
 6.6.2　StampedLock的小陷阱<br>
 6.6.3　有关StampedLock的实现思想<br>
-6.7　原子类的增强<br>
-6.7.1　更快的原子类：LongAdder<br>
-6.7.2　LongAdder的功能增强版：LongAccumulator<br>
 
-ComparatorDemo,LambdaDemo,MethodRefDemo,IntStreamDemo,ParallelStreamDemo,CompletableFutureDemo
+* 函数式编程
+* LongAdder 及 LongAccumulator 的实现原理
 
 
 第7章　使用Akka构建高并发程序<br>
@@ -197,4 +177,3 @@ ComparatorDemo,LambdaDemo,MethodRefDemo,IntStreamDemo,ParallelStreamDemo,Complet
 7.10　询问模式：Actor中的Future<br>
 7.11　多个Actor同时修改数据：Agent<br>
 7.12　像数据库一样操作内存数据：软件事务内存<br>
-……

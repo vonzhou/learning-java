@@ -9,10 +9,11 @@ import java.util.concurrent.atomic.LongAdder;
 /**
  * P283
  * 对比加同步锁,原子类,LongAdder实现累加的性能
+ * LongAdder并没有表现很好啊
  * Created by vonzhou on 2019/1/19.
  */
 public class LongAdderPerf {
-    private static final int TARGET_COUNT = 100000000;
+    private static final int TARGET_COUNT = 10000000;
     private static final int TASK_COUNT = 3;
     private static final int MAX_THREADS = 3;
 
@@ -64,9 +65,7 @@ public class LongAdderPerf {
             ex.submit(s);
         }
         cdlSync.await();
-        System.out.println("++++");
         ex.shutdown();
-        System.out.println("=====");
     }
 
     class AtomicThread implements Runnable {
@@ -130,7 +129,20 @@ public class LongAdderPerf {
         ex.shutdown();
     }
 
+    /*
 
+    SyncThread cost 334ms, v=10000001
+    SyncThread cost 335ms, v=10000000
+    SyncThread cost 335ms, v=10000002
+    AtomicThread cost 160ms, v=10000000
+    AtomicThread cost 161ms, v=10000001
+    AtomicThread cost 162ms, v=10000002
+    LongAdder cost 221ms, v=10000001
+    LongAdder cost 221ms, v=10000000
+    LongAdder cost 221ms, v=10000001
+
+
+     */
     public static void main(String[] args) throws Exception {
         new LongAdderPerf().syncPerf();
         new LongAdderPerf().atomicPerf();
