@@ -2,7 +2,7 @@
 # On The Road Learning Java
 ---
 
-## Java基础
+## Java Basics
 
 * [《Java并发编程实践》](https://github.com/vonzhou/JavaConcurrencyInPractice) :+1::+1:
 * [《Java编程思想》](https://github.com/vonzhou/Thinking-In-Java) :+1::+1:
@@ -12,7 +12,13 @@
 * Reading <Effective Java>
 * [<Algorithms, 4e> Robert Sedgewick](http://algs4.cs.princeton.edu/home/);
 * Java Language Basics, and under the hood
-* [HashMap源码阅读]()
+
+
+
+### Collections
+
+* [Hashtable 和 HashMap 的对比](src/collection/HashtableVsHashMap.md)
+* [ConcurrentHashMap源码阅读](src/collection/ConcurrentHashMap.md)
 
 ## JVM
 
