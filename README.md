@@ -2,7 +2,7 @@
 # On The Road Learning Java
 ---
 
-## Books
+## :books: Books
 
 * [《深入理解Java虚拟机》](src/jvm/) :+1::+1:
 * [《Java并发编程实践》](https://github.com/vonzhou/JavaConcurrencyInPractice) :+1::+1:
@@ -17,24 +17,24 @@
 * Effective Java
 * [<Algorithms, 4e> Robert Sedgewick](http://algs4.cs.princeton.edu/home/);
 
-## Java 基础
+## :coffee: Java语言
 
-### 并发
+### 0 Basics
+
+### 1 并发
 
 * [可重入锁 ReentrantLock 源码阅读](src/concurrent/ReentrantLock.md)
 * [深入理解条件变量Condition](http://vonzhou.com/java-condition.html)
 
-### Collections
+### 2 Collections
 
 * [Hashtable 和 HashMap 的对比](src/collection/HashtableVsHashMap.md)
 * [ConcurrentHashMap源码阅读](src/collection/ConcurrentHashMap.md)
 
 
-### [常用工具类](src/util)
+### 3 [常用工具类](src/util)
 
-
-
-## JVM
+## :hotsprings: JVM
 
 * [openjdk7源码阅读](https://github.com/vonzhou/openjdk7-note)
 
@@ -56,6 +56,6 @@
 
 
 
-## Framework
+## :purple_heart: Framework
 
 
