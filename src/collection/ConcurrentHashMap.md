@@ -220,7 +220,7 @@ public V put(K key, V value) {
 
 baseCount 记录了当前map中的记录数,采用CAS更新
 
-TODO 细节没搞清
+如果你了解LongAdder的原理,就知道这里实现计数的精妙了.
 
 
 ```java
