@@ -9,12 +9,15 @@
 * [《实战Java高并发程序设计》](src/PracticeJavaHighConcurrency) :+1:
 * [Play LeetCode](src/oj/leetcode/) 
 * [standalone java examples](https://github.com/vonzhou/java-examples)
-* Reading <Java Thread Programming>
-* Reading <Effective Java>
+* Java Thread Programming
+* Effective Java
 * [<Algorithms, 4e> Robert Sedgewick](http://algs4.cs.princeton.edu/home/);
 * Java Language Basics, and under the hood
 
+### 并发
 
+* [可重入锁 ReentrantLock 源码阅读](src/concurrent/ReentrantLock.md)
+* [深入理解条件变量Condition](http://vonzhou.com/java-condition.html)
 
 ### Collections
 

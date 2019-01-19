@@ -21,9 +21,9 @@ public class LockSupportIntDemo {
                 LockSupport.park();
                 if (Thread.interrupted()) {
                 }
-                System.out.println(getName() + "被中断");
+                System.out.println(getName() + " Interrupted");
             }
-            System.out.println(getName() + "继续执行");
+            System.out.println(getName() + " Continue Run");
         }
     }
 

@@ -1,72 +1,20 @@
 # 《实战Java高并发程序设计》
 
 
+## 2. Java并行程序基础
 
-第1章　走入并行世界<br>
-1.1　何去何从的并行计算<br>
-1.1.1　忘掉那该死的并行<br>
-1.1.2　可怕的现实：摩尔定律的失效<br>
-1.1.3　柳暗花明：不断地前进<br>
-1.1.4　光明或是黑暗<br>
-1.2　你必须知道的几个概念<br>
-1.2.1　同步（Synchronous）和异步（Asynchronous）<br>
-1.2.2　并发（Concurrency）和并行（Parallelism）<br>
-1.2.3　临界区<br>
-1.2.4　阻塞（Blocking）和非阻塞（Non-Blocking）<br>
-1.2.5　死锁（Deadlock）、饥饿（Starvation）和活锁（Livelock）<br>
-1.3　并发级别<br>
-1.3.1　阻塞（Blocking）<br>
-1.3.2　无饥饿（Starvation-Free）<br>
-1.3.3　无障碍（Obstruction-Free）<br>
-1.3.4　无锁（Lock-Free）<br>
-1.3.5　无等待（Wait-Free）<br>
-1.4　有关并行的两个重要定律<br>
-1.4.1　Amdahl定律<br>
-1.4.2　Gustafson定律<br>
-1.4.3　Amdahl定律和Gustafson定律是否相互矛盾<br>
-1.5　回到Java：JMM<br>
-1.5.1　原子性（Atomicity）<br>
-1.5.2　可见性（Visibility）<br>
-1.5.3　有序性（Ordering）<br>
-1.5.4　哪些指令不能重排：Happen-Before规则<br>
-1.6　参考文献
-
-
-第2章　Java并行程序基础<br>
-2.1　有关线程你必须知道的事<br>
-2.2　初始线程：线程的基本操作<br>
-2.2.1　新建线程<br>
-2.2.2　终止线程<br>
-2.2.3　线程中断<br>
-2.2.4　等待（wait）和通知（notify）<br>
-2.2.5　挂起（suspend）和继续执行（resume）线程<br>
-2.2.6　等待线程结束（join）和谦让（yield）<br>
-2.3　volatile与Java内存模型（JMM）<br>
-2.4　分门别类的管理：线程组<br>
-2.5　驻守后台：守护线程（Daemon）<br>
-2.6　先干重要的事：线程优先级<br>
-2.7　线程安全的概念与synchronized<br>
-2.8　程序中的幽灵：隐蔽的错误<br>
-2.8.1　无提示的错误案例<br>
-2.8.2　并发下的ArrayList<br>
-2.8.3　并发下诡异的HashMap<br>
-2.8.4　初学者常见问题：错误的加锁<br>
-2.9　参考文献
-
+* 线程的几种状态,切换的条件
+* volatile与Java内存模型
+* synchronized底层怎么实现的?修饰类和方法的异同
 
 ## 3.JDK并发包
 
+* ReentrantLock,及条件变量
+* 信号量（Semaphore
+* ReadWriteLock读写锁
+* CountDownLatch
+* LockSupport工具类
 
-3.1　多线程的团队协作：同步控制<br>
-3.1.1　synchronized的功能扩展：重入锁<br>
-3.1.2　重入锁的好搭档：Condition条件<br>
-3.1.3　允许多个线程同时访问：信号量（Semaphore）<br>
-3.1.4　ReadWriteLock读写锁<br>
-3.1.5　倒计时器：CountDownLatch<br>
-3.1.6　循环栅栏：CyclicBarrier<br>
-3.1.7　线程阻塞工具类：LockSupport<br>
-3.2　线程复用：线程池<br>
-3.2.1　什么是线程池<br>
 3.2.2　不要重复发明轮子：JDK对线程池的支持<br>
 3.2.3　刨根究底：核心线程池的内部实现<br>
 3.2.4　超负载了怎么办：拒绝策略<br>

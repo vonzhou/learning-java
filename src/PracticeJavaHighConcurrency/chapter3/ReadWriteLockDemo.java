@@ -18,8 +18,8 @@ public class ReadWriteLockDemo {
     public Object handleRead(Lock lock) throws InterruptedException {
         try {
             lock.lock();
-            Thread.sleep(1000);//ģ�������
-            System.out.println("������:" + value);
+            Thread.sleep(1000);
+            System.out.println("read:" + value);
             return value;
         } finally {
             lock.unlock();
@@ -29,8 +29,8 @@ public class ReadWriteLockDemo {
     public void handleWrite(Lock lock, int index) throws InterruptedException {
         try {
             lock.lock();
-            Thread.sleep(1000);//ģ��д����
-            System.out.println("д����:" + value);
+            Thread.sleep(1000);
+            System.out.println("write:" + value);
             value = index;
         } finally {
             lock.unlock();
@@ -43,7 +43,6 @@ public class ReadWriteLockDemo {
         Runnable readRunnable = new Runnable() {
             @Override
             public void run() {
-                //�ֱ�ʹ��������������,���ܲ���ֱ�۵ľ����ֳ���,ʹ�ö�д������������Բ���,��ʡ�˴���ʱ��
                 try {
                     demo.handleRead(readLock);
                     //demo.handleRead(lock);
@@ -57,7 +56,6 @@ public class ReadWriteLockDemo {
         Runnable writeRunnable = new Runnable() {
             @Override
             public void run() {
-                //�ֱ�ʹ��������������,���ܲ���ֱ�۵ľ����ֳ���
                 try {
                     demo.handleWrite(writeLock, new Random().nextInt(100));
                     //demo.handleWrite(lock, new Random().nextInt(100));

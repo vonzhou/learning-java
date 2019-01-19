@@ -5,7 +5,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 /**
- * �ź���
  * Created by 13 on 2017/5/5.
  */
 public class SemapDemo implements Runnable {
@@ -23,11 +22,6 @@ public class SemapDemo implements Runnable {
         }
     }
 
-    /**
-     * �ܹ�20���߳�,ϵͳ����5���߳�һ��Ϊ��λ,����ִ�в����
-     *
-     * @param args
-     */
     public static void main(String args[]) {
         ExecutorService executorService = Executors.newFixedThreadPool(20);
         final SemapDemo demo = new SemapDemo();

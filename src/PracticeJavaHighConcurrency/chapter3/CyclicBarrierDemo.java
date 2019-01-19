@@ -20,8 +20,10 @@ public class CyclicBarrierDemo {
         @Override
         public void run() {
             try {
+                // 等待所有士兵到齐
                 cyclicBarrier.await();
                 doWork();
+                // 等到所有士兵完成工作
                 cyclicBarrier.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -37,7 +39,7 @@ public class CyclicBarrierDemo {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(soldier + ":�������");
+            System.out.println(soldier + ": work done!");
         }
     }
 
@@ -54,9 +56,9 @@ public class CyclicBarrierDemo {
         @Override
         public void run() {
             if (flag) {
-                System.out.println("˾��:[ʿ��" + N + "��,�������!");
+                System.out.println("长官, 士兵" + N + "任务完成!");
             } else {
-                System.out.println("˾��:[ʿ��" + N + "��,�������!");
+                System.out.println("长官, 士兵" + N + "到达指定地点!");
                 flag = true;
             }
         }
@@ -68,10 +70,10 @@ public class CyclicBarrierDemo {
         Thread[] allSoldier = new Thread[N];
         boolean flag = false;
         CyclicBarrier cyclicBarrier = new CyclicBarrier(N, new BarrierRun(flag, N));
-        System.out.println("���϶���!");
+        System.out.println("长官:集合!");
         for (int i = 0; i < N; i++) {
-            System.out.println("ʿ��" + i + "����!");
-            allSoldier[i] = new Thread(new Soldier(cyclicBarrier, "ʿ��" + i));
+            System.out.println("士兵" + i + "报道!");
+            allSoldier[i] = new Thread(new Soldier(cyclicBarrier, "士兵" + i));
             allSoldier[i].start();
         }
     }
