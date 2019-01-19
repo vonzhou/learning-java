@@ -6,6 +6,7 @@
 
 * [《Java并发编程实践》](https://github.com/vonzhou/JavaConcurrencyInPractice) :+1::+1:
 * [《Java编程思想》](https://github.com/vonzhou/Thinking-In-Java) :+1::+1:
+* [《实战Java高并发程序设计》](src/PracticeJavaHighConcurrency) :+1:
 * [Play LeetCode](src/oj/leetcode/) 
 * [standalone java examples](https://github.com/vonzhou/java-examples)
 * Reading <Java Thread Programming>
@@ -19,6 +20,9 @@
 
 * [Hashtable 和 HashMap 的对比](src/collection/HashtableVsHashMap.md)
 * [ConcurrentHashMap源码阅读](src/collection/ConcurrentHashMap.md)
+
+
+### 常用工具类
 
 ## JVM
 
