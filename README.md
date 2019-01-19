@@ -2,17 +2,21 @@
 # On The Road Learning Java
 ---
 
-## Java Basics
+## Books
 
 * [《Java并发编程实践》](https://github.com/vonzhou/JavaConcurrencyInPractice) :+1::+1:
 * [《Java编程思想》](https://github.com/vonzhou/Thinking-In-Java) :+1::+1:
 * [《实战Java高并发程序设计》](src/PracticeJavaHighConcurrency) :+1:
+* [《Java8实战》](https://github.com/vonzhou/Java8InAction)
+* [《深入剖析Tomcat》](https://github.com/vonzhou/HowTomcatWorks) :+1::+1:
+* [《分布式Java应用 基础与实践》](src/readingbook/分布式Java应用.md)
 * [Play LeetCode](src/oj/leetcode/) 
 * [standalone java examples](https://github.com/vonzhou/java-examples)
 * Java Thread Programming
 * Effective Java
 * [<Algorithms, 4e> Robert Sedgewick](http://algs4.cs.princeton.edu/home/);
-* Java Language Basics, and under the hood
+
+## Java 基础
 
 ### 并发
 
@@ -32,6 +36,7 @@
 ## JVM
 
 * [《深入理解Java虚拟机》](src/jvm/) :+1::+1:
+* [openjdk7源码阅读](https://github.com/vonzhou/openjdk7-note)
 
 ### 我觉得不错的资源
 
@@ -53,5 +58,4 @@
 
 ## Framework
 
-* [《深入剖析Tomcat》](https://github.com/vonzhou/HowTomcatWorks) :+1::+1:
 
