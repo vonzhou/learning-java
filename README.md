@@ -19,7 +19,8 @@
 * [《Java8实战》](https://github.com/vonzhou/Java8InAction) :+1:
 * [《深入剖析Tomcat》](https://github.com/vonzhou/HowTomcatWorks) :+1::+1:
 * [《分布式Java应用 基础与实践》](src/readingbook/分布式Java应用.md) :+1:
-* [Play LeetCode](src/oj/leetcode/) 
+* [《大型网站系统与Java中间件实践》](src/readingbook/大型网站系统与Java中间件实践.md) :+1:
+* [Play LeetCode](src/oj/leetcode/)
 * [standalone java examples](https://github.com/vonzhou/java-examples)
 * Java Thread Programming
 * Effective Java
