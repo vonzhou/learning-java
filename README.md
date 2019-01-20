@@ -46,6 +46,7 @@
 * [Hashtable 和 HashMap 的对比](src/collection/HashtableVsHashMap.md)
 * [ConcurrentHashMap源码阅读](src/collection/ConcurrentHashMap.md)
 * [ArrayBlockingQueue与Disruptor的性能对比](http://vonzhou.com/queue-vs-disruptor.html)
+* [TimSort算法](src/collection/TimSort源码分析.md)
 
 
 ### :three: [常用工具类](src/util)
@@ -82,6 +83,8 @@
 
 ### :two: Spring 系列
 
+* [DispatcherServlet 源码阅读](https://github.com/vonzhou/learning-spring/blob/master/sourcereading/DispatcherServlet.md)
+* [bean解析过程分析](https://github.com/vonzhou/learning-spring/blob/master/sourcereading/bean%E8%A7%A3%E6%9E%90%E5%88%9D%E4%BD%93%E9%AA%8C.md), [bean实例化过程分析](https://github.com/vonzhou/learning-spring/blob/master/sourcereading/bean%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%B5%85%E6%9E%90.md)
 * [Spring Boot 执行初始化逻辑的方法](http://vonzhou.com/spring-boot-init-methods.html)
 * [如何加快 Spring Boot 项目的启动速度？](http://vonzhou.com/spring-boot-speedup.html)
 * [解决Zuul无法同时转发Multipart和JSON请求的问题](http://vonzhou.com/zuul-forward-multipart-and-json.html)
