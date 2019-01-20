@@ -353,7 +353,7 @@ public V remove(Object key) {
 获取元素个数
 
 
-为啥不用AtomicLong来计算呢?
+类似LongAdder.sum()方法.
 
 ```java
 public int size() {
