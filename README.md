@@ -19,23 +19,27 @@
 
 ## :coffee: Java语言
 
-### 0 Basics
+### :zero: Basics
 
 * [IntegerCache源码阅读](src/lang/IntegerCache.md)
 
-### 1 并发
+### :one: 并发
 
+* [CAS 的底层实现](http://vonzhou.com/cas.html)
+* [记一次 ArrayList 线程安全问题](http://vonzhou.com/arraylist-thread-safe-case.html)
+* [如何保证ArrayList在多线程环境下的线程安全性](http://vonzhou.com/arraylist-thread-safe.html)
 * [synchronized的实现原理](TODO)
 * [可重入锁 ReentrantLock 源码阅读](src/concurrent/ReentrantLock.md)
-* [深入理解条件变量Condition](http://vonzhou.com/java-condition.html)
+* [深入理解条件变量Condition](src/concurrent/深入理解条件变量Condition.md)
 
-### 2 Collections
+### :two: Collections
 
 * [Hashtable 和 HashMap 的对比](src/collection/HashtableVsHashMap.md)
 * [ConcurrentHashMap源码阅读](src/collection/ConcurrentHashMap.md)
+* [ArrayBlockingQueue与Disruptor的性能对比](http://vonzhou.com/queue-vs-disruptor.html)
 
 
-### 3 [常用工具类](src/util)
+### :three: [常用工具类](src/util)
 
 ## :hotsprings: JVM
 
@@ -61,9 +65,16 @@
 
 ## :purple_heart: Framework
 
+### :one: Disruptor
 
-### Spring 系列
+* [Disruptor 快速入门](http://vonzhou.com/disruptor-hello.html)
+* [Disruptor中的事件消费模式](http://vonzhou.com/disruptor-consume-pattern.html)
 
 
+### :two: Spring 系列
+
+* [Spring Boot 执行初始化逻辑的方法](http://vonzhou.com/spring-boot-init-methods.html)
+* [如何加快 Spring Boot 项目的启动速度？](http://vonzhou.com/spring-boot-speedup.html)
+* [解决Zuul无法同时转发Multipart和JSON请求的问题](http://vonzhou.com/zuul-forward-multipart-and-json.html)
 
 
