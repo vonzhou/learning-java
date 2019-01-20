@@ -21,8 +21,11 @@
 
 ### 0 Basics
 
+* [IntegerCache源码阅读](src/lang/IntegerCache.md)
+
 ### 1 并发
 
+* [synchronized的实现原理](TODO)
 * [可重入锁 ReentrantLock 源码阅读](src/concurrent/ReentrantLock.md)
 * [深入理解条件变量Condition](http://vonzhou.com/java-condition.html)
 
@@ -57,5 +60,10 @@
 
 
 ## :purple_heart: Framework
+
+
+### Spring 系列
+
+
 
 
