@@ -47,6 +47,7 @@
 * [ConcurrentHashMap源码阅读](src/collection/ConcurrentHashMap.md)
 * [ArrayBlockingQueue与Disruptor的性能对比](http://vonzhou.com/queue-vs-disruptor.html)
 * [TimSort算法](src/collection/TimSort源码分析.md)
+* [Collections工具类源码阅读](src/collection/Collections.md)
 
 
 ### :three: [常用工具类](src/util)

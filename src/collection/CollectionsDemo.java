@@ -10,7 +10,27 @@ import java.util.List;
 public class CollectionsDemo {
     public static void main(String[] args) {
 //        search();
-        reverse();
+//        reverse();
+//        shuffle();
+        rotate();
+    }
+
+
+    private static void rotate() {
+        List<Integer> lst = Arrays.asList(1, 2, 3, 4, 5, 6);
+        System.out.println(lst);
+        Collections.rotate(lst, 2);
+        System.out.println(lst);
+
+        lst = Arrays.asList(1, 2, 3, 4, 5, 6);
+        Collections.rotate(lst, -1);
+        System.out.println(lst);
+    }
+
+    private static void shuffle() {
+        List<Integer> lst = Arrays.asList(435, 43, 234, 9, 324, 33);
+        Collections.shuffle(lst);
+        System.out.println(lst);
     }
 
     private static void reverse() {

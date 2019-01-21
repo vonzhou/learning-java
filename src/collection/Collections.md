@@ -1,7 +1,7 @@
 # Collections工具类源码阅读
 
 
-## 二分查找 binarySearch
+## 二分查找 binarySearch :+1:
 
 列表必须是递增排序的,针对是否是可随机访问的列表,根据索引定位元素的方法不同.
 
@@ -62,7 +62,7 @@ public static <T>
     }
 ```
 
-## 排序 sort
+## 排序 sort :+1:
 
 TimSort
 
@@ -146,22 +146,365 @@ public E set(int index, E element) {
 
 ## shuffle
 
+基本的思路就是：将当前元素随机和前面的一个元素交换，从而得到一个随机化的列表，针对链表的话，先转换为数组，shuffle后再转为链表。
+
+```java
+ private static final int SHUFFLE_THRESHOLD        =    5;
+
+
+public static void shuffle(List<?> list) {
+        Random rnd = r;
+        if (rnd == null)
+            r = rnd = new Random(); // harmless race.
+        shuffle(list, rnd);
+    }
+
+
+public static void shuffle(List<?> list, Random rnd) {
+        int size = list.size();
+        if (size < SHUFFLE_THRESHOLD || list instanceof RandomAccess) {
+            for (int i=size; i>1; i--)
+                swap(list, i-1, rnd.nextInt(i));
+        } else {
+            Object arr[] = list.toArray();
+
+            // Shuffle array
+            for (int i=size; i>1; i--)
+                swap(arr, i-1, rnd.nextInt(i));
+
+            // Dump array back into list
+            // instead of using a raw type here, it's possible to capture
+            // the wildcard but it will require a call to a supplementary
+            // private method
+            ListIterator it = list.listIterator();
+            for (int i=0; i<arr.length; i++) {
+                it.next();
+                it.set(arr[i]);
+            }
+        }
+    }
+```
+
 ## 填充 fill
+
+比较简单。
+
+BTW，这里面的常量值都是怎么得到的，经过测试了吗？
+
+```java
+private static final int FILL_THRESHOLD           =   25;
+
+public static <T> void fill(List<? super T> list, T obj) {
+        int size = list.size();
+
+        if (size < FILL_THRESHOLD || list instanceof RandomAccess) {
+            for (int i=0; i<size; i++)
+                list.set(i, obj);
+        } else {
+            ListIterator<? super T> itr = list.listIterator();
+            for (int i=0; i<size; i++) {
+                itr.next();
+                itr.set(obj);
+            }
+        }
+    }
+```
 
 ## 拷贝 copy
 
-## 最小值 min
+```java
+public static <T> void copy(List<? super T> dest, List<? extends T> src) {
+        int srcSize = src.size();
+        if (srcSize > dest.size())
+            throw new IndexOutOfBoundsException("Source does not fit in dest");
 
-## 最大值 max
+        if (srcSize < COPY_THRESHOLD ||
+            (src instanceof RandomAccess && dest instanceof RandomAccess)) {
+            for (int i=0; i<srcSize; i++)
+                dest.set(i, src.get(i));
+        } else {
+            ListIterator<? super T> di=dest.listIterator();
+            ListIterator<? extends T> si=src.listIterator();
+            for (int i=0; i<srcSize; i++) {
+                di.next();
+                di.set(si.next());
+            }
+        }
+    }
+```
 
-## 旋转 rotate
+## 最小值 min,最大值 max
+
+通过过迭代器找最小值，唯一区别的是不同容器实现迭代的方式不同，也是性能影响的地方。
+
+```java
+public static <T extends Object & Comparable<? super T>> T min(Collection<? extends T> coll) {
+        Iterator<? extends T> i = coll.iterator();
+        T candidate = i.next();
+
+        while (i.hasNext()) {
+            T next = i.next();
+            if (next.compareTo(candidate) < 0)
+                candidate = next;
+        }
+        return candidate;
+    }
+```
+
+## 旋转 rotate :+1:
+
+`[1, 2, 3, 4, 5, 6]` 旋转1得到`[6, 1, 2, 3, 4, 5]`， 旋转-1得到`[2, 3, 4, 5, 6, 1]`，正负可以理解为向右旋转，向左旋转。
+
+实现数组旋转我想到的是搞个临时数组tmp把前一个部分先保存，然后后一部分迁移，再追加上tmp。看看JDK怎么搞的。
+
+
+1. 如果是数组或者链表长度小于100，则采用多趟修正元素位置的方式，初看可能不好理解，可以跟几步流程就清晰了
+
+![](Collections-rotate1.png)
+
+2. 对于长链表，采用的方式是逆序两次
+
+`R(A:::B) = R(R(A):::R(B))`
+
+
+```java
+private static final int ROTATE_THRESHOLD         =  100;
+
+public static void rotate(List<?> list, int distance) {
+        if (list instanceof RandomAccess || list.size() < ROTATE_THRESHOLD)
+            rotate1(list, distance);
+        else
+            rotate2(list, distance);
+    }
+
+    private static <T> void rotate1(List<T> list, int distance) {
+        int size = list.size();
+        if (size == 0)
+            return;
+        distance = distance % size;
+        if (distance < 0)
+            distance += size;
+        if (distance == 0)
+            return;
+
+        for (int cycleStart = 0, nMoved = 0; nMoved != size; cycleStart++) {
+            T displaced = list.get(cycleStart);
+            int i = cycleStart;
+            do {
+                i += distance;
+                if (i >= size)
+                    i -= size;
+                displaced = list.set(i, displaced);
+                nMoved ++;
+            } while (i != cycleStart);
+        }
+    }
+
+    private static void rotate2(List<?> list, int distance) {
+        int size = list.size();
+        if (size == 0)
+            return;
+        int mid =  -distance % size;
+        if (mid < 0)
+            mid += size;
+        if (mid == 0)
+            return;
+
+        reverse(list.subList(0, mid));
+        reverse(list.subList(mid, size));
+        reverse(list);
+    }
+```
 
 ## 替换元素 replaceAll
 
+须注意的就是旧值是否为空的情况。
+
+```java
+public static <T> boolean replaceAll(List<T> list, T oldVal, T newVal) {
+        boolean result = false;
+        int size = list.size();
+        if (size < REPLACEALL_THRESHOLD || list instanceof RandomAccess) {
+            if (oldVal==null) {
+                for (int i=0; i<size; i++) {
+                    if (list.get(i)==null) {
+                        list.set(i, newVal);
+                        result = true;
+                    }
+                }
+            } else {
+                for (int i=0; i<size; i++) {
+                    if (oldVal.equals(list.get(i))) {
+                        list.set(i, newVal);
+                        result = true;
+                    }
+                }
+            }
+        } else {
+            ListIterator<T> itr=list.listIterator();
+            if (oldVal==null) {
+                for (int i=0; i<size; i++) {
+                    if (itr.next()==null) {
+                        itr.set(newVal);
+                        result = true;
+                    }
+                }
+            } else {
+                for (int i=0; i<size; i++) {
+                    if (oldVal.equals(itr.next())) {
+                        itr.set(newVal);
+                        result = true;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+```
+
 ## 定位子列表 indexOfSubList
+
+没啥说的。
+
+```java
+public static int indexOfSubList(List<?> source, List<?> target) {
+        int sourceSize = source.size();
+        int targetSize = target.size();
+        int maxCandidate = sourceSize - targetSize;
+
+        if (sourceSize < INDEXOFSUBLIST_THRESHOLD ||
+            (source instanceof RandomAccess&&target instanceof RandomAccess)) {
+        nextCand:
+            for (int candidate = 0; candidate <= maxCandidate; candidate++) {
+                for (int i=0, j=candidate; i<targetSize; i++, j++)
+                    if (!eq(target.get(i), source.get(j)))
+                        continue nextCand;  // Element mismatch, try next cand
+                return candidate;  // All elements of candidate matched target
+            }
+        } else {  // Iterator version of above algorithm
+            ListIterator<?> si = source.listIterator();
+        nextCand:
+            for (int candidate = 0; candidate <= maxCandidate; candidate++) {
+                ListIterator<?> ti = target.listIterator();
+                for (int i=0; i<targetSize; i++) {
+                    if (!eq(ti.next(), si.next())) {
+                        // Back up source iterator to next candidate
+                        for (int j=0; j<i; j++)
+                            si.previous();
+                        continue nextCand;
+                    }
+                }
+                return candidate;
+            }
+        }
+        return -1;  // No candidate matched the target
+    }
+```
 
 ## 包装为不可变列表
 
 
-##
+提供了一个``的视图，操作会使用互斥锁进行同步，
+
+```java
+public static <T> List<T> synchronizedList(List<T> list) {
+        return (list instanceof RandomAccess ?
+                new SynchronizedRandomAccessList<>(list) :
+                new SynchronizedList<>(list));
+    }
+
+ static class SynchronizedList<E>
+         extends SynchronizedCollection<E>
+         implements List<E> {
+         private static final long serialVersionUID = -7754090372962971524L;
+
+         final List<E> list;
+
+         SynchronizedList(List<E> list) {
+             super(list);
+             this.list = list;
+         }
+         SynchronizedList(List<E> list, Object mutex) {
+             super(list, mutex);
+             this.list = list;
+         }
+
+         public boolean equals(Object o) {
+             if (this == o)
+                 return true;
+             synchronized (mutex) {return list.equals(o);}
+         }
+         public int hashCode() {
+             synchronized (mutex) {return list.hashCode();}
+         }
+
+         public E get(int index) {
+             synchronized (mutex) {return list.get(index);}
+         }
+         public E set(int index, E element) {
+             synchronized (mutex) {return list.set(index, element);}
+         }
+         public void add(int index, E element) {
+             synchronized (mutex) {list.add(index, element);}
+         }
+         public E remove(int index) {
+             synchronized (mutex) {return list.remove(index);}
+         }
+
+         public int indexOf(Object o) {
+             synchronized (mutex) {return list.indexOf(o);}
+         }
+         public int lastIndexOf(Object o) {
+             synchronized (mutex) {return list.lastIndexOf(o);}
+         }
+
+         public boolean addAll(int index, Collection<? extends E> c) {
+             synchronized (mutex) {return list.addAll(index, c);}
+         }
+
+        // 外面使用的时候也要注意线程安全
+         public ListIterator<E> listIterator() {
+             return list.listIterator(); // Must be manually synched by user
+         }
+
+         public ListIterator<E> listIterator(int index) {
+             return list.listIterator(index); // Must be manually synched by user
+         }
+
+         public List<E> subList(int fromIndex, int toIndex) {
+             synchronized (mutex) {
+                 return new SynchronizedList<>(list.subList(fromIndex, toIndex),
+                                             mutex);
+             }
+         }
+
+         @Override
+         public void replaceAll(UnaryOperator<E> operator) {
+             synchronized (mutex) {list.replaceAll(operator);}
+         }
+         @Override
+         public void sort(Comparator<? super E> c) {
+             synchronized (mutex) {list.sort(c);}
+         }
+
+         /**
+          * SynchronizedRandomAccessList instances are serialized as
+          * SynchronizedList instances to allow them to be deserialized
+          * in pre-1.4 JREs (which do not have SynchronizedRandomAccessList).
+          * This method inverts the transformation.  As a beneficial
+          * side-effect, it also grafts the RandomAccess marker onto
+          * SynchronizedList instances that were serialized in pre-1.4 JREs.
+          *
+          * Note: Unfortunately, SynchronizedRandomAccessList instances
+          * serialized in 1.4.1 and deserialized in 1.4 will become
+          * SynchronizedList instances, as this method was missing in 1.4.
+          */
+         private Object readResolve() {
+             return (list instanceof RandomAccess
+                     ? new SynchronizedRandomAccessList<>(list)
+                     : this);
+         }
+     }
+
+```
 
