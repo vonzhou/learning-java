@@ -9,9 +9,11 @@ import java.util.List;
 /**
  * Created by vonzhou on 2017/6/11.
  */
-public class ArrayListLearn {
+public class ArrayListDemo {
     public static void main(String[] args) {
-        test3();
+        test1();
+//        test2();
+//        test3();
     }
 
     /**
@@ -27,15 +29,21 @@ public class ArrayListLearn {
     }
 
     public static void test1() {
+        // 是Arrays内部类ArrayList，而不是java.util.ArrayList
         List<String> list = Arrays.asList("hello");
 
         System.out.println(list.toArray().getClass());
 
         Object[] oa = list.toArray();
         String[] sa = (String[]) oa;// ok
+
+
+        String[] strArr = new String[1];
+        System.out.println(strArr instanceof Object[]); // true
+        System.out.println(new ArrayListDemo[0] instanceof Object[]); // true
     }
 
-    public static void test3(){
+    public static void test3() {
         List<String> list = Lists.newArrayList();
         list.add("hello");
 
