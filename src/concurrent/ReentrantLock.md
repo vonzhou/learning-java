@@ -29,6 +29,18 @@ protected final boolean tryAcquire(int acquires) {
 }
 ```
 
+怎么知道这个锁是被哪个线程占有的？
+
+首次获取锁成功后，会把该信息保存起来，代码在`AbstractOwnableSynchronizer`中：
+
+```java
+    private transient Thread exclusiveOwnerThread;
+
+    protected final void setExclusiveOwnerThread(Thread thread) {
+        exclusiveOwnerThread = thread;
+    }
+```
+
 ## 2. 公平，非公平锁是怎么实现的？
 
 ReentrantLock 实例化的时候可以配置公平争用策略，公平，非公平对应了 ReentrantLock  内部的两个AQS类：FairSync，NonfairSync。**默认是非公平的。**
