@@ -20,12 +20,11 @@
 * [《深入剖析Tomcat》](https://github.com/vonzhou/HowTomcatWorks) :+1::+1:
 * [《分布式Java应用 基础与实践》](src/readingbook/分布式Java应用.md) :+1:
 * [《大型网站系统与Java中间件实践》](src/readingbook/大型网站系统与Java中间件实践.md) :+1:
+* [《Effective Java》](src/effectivejava/)
+* [《Java Thread Programming》](src/javathreadprogramming)
 * 《RocketMQ实战与原理解析》
 * 《》
-* [Play LeetCode](src/oj/leetcode/)
 * [standalone java examples](https://github.com/vonzhou/java-examples)
-* Java Thread Programming
-* Effective Java
 * [<Algorithms, 4e> Robert Sedgewick](http://algs4.cs.princeton.edu/home/);
 
 ## :coffee: Java语言
@@ -106,3 +105,7 @@
 ### RocketMQ
 
 [RocketMQ源码阅读](https://github.com/vonzhou/rocketmq)
+
+## Algorithm
+
+[Leetcode](src/oj/leetcode)
