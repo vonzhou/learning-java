@@ -68,7 +68,9 @@
 
 :+1: [The "Double-Checked Locking is Broken" Declaration](http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.htmld)
 
+:+1: [Useful JVM flags, revisited](http://www.javamonamour.org/2015/09/useful-jvm-flags-revisited.html)
 
+[The most complete list of -XX options for Java JVM](http://stas-blogspot.blogspot.com/2011/07/most-complete-list-of-xx-options-for.html)
 
 ## :purple_heart: Framework
 
