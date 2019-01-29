@@ -23,7 +23,7 @@
 * [《Effective Java》](src/effectivejava/)
 * [《Java Thread Programming》](src/javathreadprogramming)
 * 《RocketMQ实战与原理解析》
-* 《》
+* 《Kafka权威指南》 :+1:
 * [standalone java examples](https://github.com/vonzhou/java-examples)
 * [<Algorithms, 4e> Robert Sedgewick](http://algs4.cs.princeton.edu/home/);
 
@@ -106,6 +106,13 @@
 
 [RocketMQ源码阅读](https://github.com/vonzhou/rocketmq)
 
+### Kafka
+
 ## Algorithm
 
 [Leetcode](src/oj/leetcode)
+
+
+## Related
+
+[Scala编程之路](https://github.com/vonzhou/learning-scala)
