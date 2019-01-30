@@ -108,6 +108,8 @@
 
 ### Kafka
 
+[大面积offset commit失败，导致不停Rebalance，大量消息重复消费的问题](src/framework/kafka/rebalancejitter/README.md)
+
 ## Algorithm
 
 [Leetcode](src/oj/leetcode)
