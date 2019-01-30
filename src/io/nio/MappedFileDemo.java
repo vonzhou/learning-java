@@ -1,16 +1,17 @@
-package mythought.javabasic.io;
+package io.nio;
 
 import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
-// Using memory mapped buffer
-public class MemoryMappedFileExample {
+/**
+ * MappedByteBuffer
+ */
+public class MappedFileDemo {
 
     private static int count = 10 * 1024 * 1024; //10 MB
 
     public static void main(String[] args) throws Exception {
-
         RandomAccessFile memoryMappedFile = new RandomAccessFile("C:/hello.txt", "rw");
 
         //Mapping a file into memory

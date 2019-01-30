@@ -27,3 +27,5 @@ TODO 使用不同的GC算法看GC日志
 ## 参考
 
 [Our Collectors](https://blogs.oracle.com/jonthecollector/our-collectors)
+
+[Oracle JVM Garbage Collectors Available From JDK 1.7.0_04 And After](http://www.fasterj.com/articles/oraclecollectors1.shtml)
