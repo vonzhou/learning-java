@@ -1,4 +1,6 @@
+[主页](http://vonzhou.com)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) | [GitHub](https://github.com/vonzhou)
 # IntegerCache源码阅读
+---
 
 先从一个思考题开始，考虑下面的代码输出是什么？
 
@@ -28,7 +30,7 @@ true
 
 把整数常量赋值给整数包装类型，实际上调用了Integer.valueOf方法，通过指令可以看到：
 
-![](/images/IntegerCache.jpg)
+![](IntegerCache.jpg)
 
 
 ```java

@@ -1,4 +1,7 @@
+[主页](http://vonzhou.com)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) | [GitHub](https://github.com/vonzhou)
+---
 # 可重入锁 ReentrantLock 源码阅读
+---
 
 带着问题阅读。
 
@@ -58,7 +61,7 @@ public ReentrantLock(boolean fair) {
 锁，释放锁过程如下，无论公平还是非公平锁释放过程是一样的。
 
 
-![](/images/ReentrantLock-Sync.jpg)
+![](ReentrantLock-Sync.jpg)
 
 
 二者的区别在于`tryAcquire`的时候逻辑不同。

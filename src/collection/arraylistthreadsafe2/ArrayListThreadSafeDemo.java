@@ -1,4 +1,4 @@
-package collection;
+package collection.arraylistthreadsafe2;
 
 import com.google.common.collect.Lists;
 
