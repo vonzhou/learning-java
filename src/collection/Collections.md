@@ -1,5 +1,7 @@
+[主页](http://vonzhou.com)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) | [GitHub](https://github.com/vonzhou)
+---
 # Collections工具类源码阅读
-
+---
 
 ## 二分查找 binarySearch :+1:
 
@@ -508,3 +510,60 @@ public static <T> List<T> synchronizedList(List<T> list) {
 
 ```
 
+## disjoint 不相交集
+
+判断2个集合是否不相交。避免不免的是迭代一个集合，然后判断元素是否存在于另一个集合中，为了性能最优，就要决定哪个集合用于迭代，哪个集合判断包含关系。
+
+```java
+public static boolean disjoint(Collection<?> c1, Collection<?> c2) {
+        // The collection to be used for contains(). Preference is given to
+        // the collection who's contains() has lower O() complexity.
+        Collection<?> contains = c2;
+        // The collection to be iterated. If the collections' contains() impl
+        // are of different O() complexity, the collection with slower
+        // contains() will be used for iteration. For collections who's
+        // contains() are of the same complexity then best performance is
+        // achieved by iterating the smaller collection.
+        Collection<?> iterate = c1;
+
+        // Performance optimization cases. The heuristics:
+        //   1. Generally iterate over c1.
+        //   2. If c1 is a Set then iterate over c2.
+        //   3. If either collection is empty then result is always true.
+        //   4. Iterate over the smaller Collection.
+        if (c1 instanceof Set) {
+            // Use c1 for contains as a Set's contains() is expected to perform
+            // better than O(N/2)
+            iterate = c2;
+            contains = c1;
+        } else if (!(c2 instanceof Set)) {
+            // Both are mere Collections. Iterate over smaller collection.
+            // Example: If c1 contains 3 elements and c2 contains 50 elements and
+            // assuming contains() requires ceiling(N/2) comparisons then
+            // checking for all c1 elements in c2 would require 75 comparisons
+            // (3 * ceiling(50/2)) vs. checking all c2 elements in c1 requiring
+            // 100 comparisons (50 * ceiling(3/2)).
+            int c1size = c1.size();
+            int c2size = c2.size();
+            if (c1size == 0 || c2size == 0) {
+                // At least one collection is empty. Nothing will match.
+                return true;
+            }
+
+            if (c1size > c2size) {
+                iterate = c2;
+                contains = c1;
+            }
+        }
+
+        for (Object e : iterate) {
+            if (contains.contains(e)) {
+               // 有共同元素
+                return false;
+            }
+        }
+
+        // 不相交
+        return true;
+    }
+```

@@ -1,4 +1,7 @@
+[主页](http://vonzhou.com)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) | [GitHub](https://github.com/vonzhou)
+---
 # Hashtable 和 HashMap 的对比
+---
 
 Hashtable是线程安全的,每个方法上都有synchronized修饰.
 
