@@ -5,6 +5,8 @@
 
 ![](ArrayList-diagram.png)
 
+大体上和Vector类似，只不过该类是unsynchronized的。
+
 底层存储是一个Object类型的数组。
 
 ```java
@@ -16,6 +18,8 @@ private int size;
 protected transient int modCount = 0;
 
 ```
+
+size, isEmpty, get, set, iterator, 和 listIterator 方法的复杂度是O（1），add方法的复杂度是 amortized constant time（注意理解），其他的是O（N）。
 
 ## 新增元素
 
