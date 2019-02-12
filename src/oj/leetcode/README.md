@@ -42,11 +42,15 @@ Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不�
 
 [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
 
+[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)
+
+[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+
 ----------------------
 ☆☆☆  动态规划
 
 Triangle
-Minimum Path Sum   
+Minimum Path Sum
 Maximum Subarray 找连续元素之后最大的子数组
 
 
