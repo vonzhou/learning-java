@@ -11,8 +11,9 @@ import java.util.*;
  */
 public class LongestSubstrWithoutRepeat {
 
-    /*
-     * 1.Brute
+    /**
+     * AC
+     * 1.Brute,复杂度O(N^2)
      * 因为是求最大的长度，所以不需要开辟太多的空间
      */
     public int lengthOfLongestSubstring(String s) {
@@ -23,7 +24,7 @@ public class LongestSubstrWithoutRepeat {
 
         int R = 256;
 
-        int M = 0;  // current length
+        int M = 0;  // 记录无重复子串的最大长度
         int N = s.length();
         for (int i = 0; i < N; i++) {
             boolean[] exist = new boolean[R];
@@ -40,10 +41,9 @@ public class LongestSubstrWithoutRepeat {
         return M;
     }
 
-    /*
-     * 2.
-     * ????????????????????????????????
-     * Time Limit Exceed!
+    /**
+     * AC
+     * 2.和方法一一样, Runtime: 82 ms, Memory Usage: 40.4 MB
      */
     public int lengthOfLongestSubstring2(String s) {
         if (s == null)
@@ -68,7 +68,7 @@ public class LongestSubstrWithoutRepeat {
         return M;
     }
 
-    /*
+    /**
      * 3. 利用HashMap
      * XXX 转载的
      */
@@ -94,7 +94,7 @@ public class LongestSubstrWithoutRepeat {
 
     /**
      * AC
-     * 基于队列的滑动窗口
+     * 基于队列的滑动窗口,Runtime: 47 ms
      *
      * @param s
      * @return

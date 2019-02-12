@@ -24,7 +24,8 @@ Path Sum
 Populating Next Right Pointers in Each Node 将每一层的节点用next串接起来，难点在于常数空间复杂度。
 
 ----------------------
-☆☆☆  字符串 String
+## 字符串 String
+
 split方法注意理解, 原理是啥？ 是否总能符合自己的需求；
 区分 空格字符，空串，null 的含义；
 Valid Palindrome 回文的判断，重点是对一些边界的考虑；
@@ -35,6 +36,9 @@ Add Binary 直接遍历俩字符串，有点归并排序的味道，不过这里
 ZigZag Conversion 	把之字形表示的字符串分层表示，花了2.5h，重在找到一种迭代模式，剩下的都是细节。	
 Reverse String In Words 如果用库函数分词的话主要注意开头的空格是否存在 ； 用C如何实现in place ？
 Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不难
+
+
+[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 ----------------------
 ☆☆☆  动态规划
