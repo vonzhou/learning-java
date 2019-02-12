@@ -80,7 +80,7 @@ public class LongestCommonPrefix {
 
         String common = strs[0];
         for (int i = 1; i < strs.length; i++) {
-            common = longestCommonPrefixOfTwo(common, strs[i]);
+            common = longestCommonPrefixOfTwo2(common, strs[i]);
         }
         return common;
 
@@ -93,9 +93,25 @@ public class LongestCommonPrefix {
         return pre;
     }
 
+    /**
+     * 耗时6ms,多了一点点
+     */
+    private String longestCommonPrefixOfTwo2(String common, String str) {
+        int min = Math.min(common.length(), str.length());
+        int i = 0;
+        while (i < min) {
+            if (common.charAt(i) != str.charAt(i)) {
+                break;
+            }
+            i++;
+        }
+        return common.substring(0, i);
+    }
+
 
     public static void main(String[] args) {
-        String ss[] = {"flower", "flow", "flight"};
+//        String ss[] = {"flower", "flow", "flight"};
+        String ss[] = {"c", "c"};
         System.out.println(new LongestCommonPrefix().longestCommonPrefix4(ss));
     }
 }
