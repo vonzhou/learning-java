@@ -40,6 +40,8 @@ Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不�
 
 [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
+[14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
+
 ----------------------
 ☆☆☆  动态规划
 
