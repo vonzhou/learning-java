@@ -43,10 +43,17 @@ Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不�
 [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
 
 
-|Problem|Implementation|Related|
-|---|---|---|
-|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | [FindAnagrams.java](FindAnagrams.java) | 76|
-|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| [PermutationInString.java](PermutationInString.java) | 438|
+|Problem|Degree|Implementation|Related|
+|---|---|---|---|
+|[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)|M|[MultiplyStrings.java](MultiplyStrings.java) | |
+|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | |[FindAnagrams.java](FindAnagrams.java) | 76|
+|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| |[PermutationInString.java](PermutationInString.java) | 438|
+|[151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | M | [ReverseStringInWords.java](ReverseStringInWords.java) | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
