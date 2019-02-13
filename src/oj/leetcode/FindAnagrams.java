@@ -3,7 +3,7 @@ package oj.leetcode;
 import java.util.*;
 
 /**
- * Find All Anagrams(变位词) in a String
+ * 438. Find All Anagrams in a String
  * 基本的思路是:遍历s,依次看子串是否是p的变位词,判断是否是变位词就看字符出现的个数是否一样了.
  * https://leetcode.com/problems/find-all-anagrams-in-a-string/
  * <p>
@@ -15,7 +15,8 @@ import java.util.*;
 public class FindAnagrams {
 
     /**
-     * 1. 耗时161ms
+     * 1. 复杂度O（M*N）？
+     * 耗时161ms
      */
     public List<Integer> findAnagrams1(String s, String p) {
         int sLen = s.length();
@@ -52,89 +53,44 @@ public class FindAnagrams {
     }
 
     /**
-     * 没有理解
+     * AC
+     * 2.滑动窗口的思想，复杂度O（M）
+     * 耗时7ms
      */
-    public List<Integer> findAnagrams(String s, String p) {
-        int left = 0;
-        int right = 0;
-        int sLen = s.length();
-        int pLen = p.length();
-        int[] hash = new int[256];
-        List<Integer> pos = new ArrayList<Integer>();
-
-        for (int i = 0; i < pLen; i++) {
-            hash[(int) p.charAt(i)]++;
-        }
-        // 记录窗口内字符的个数
-        int count = 0;
-
-        while (right < sLen) {
-            // right 位置出现了p中的字符
-            if (hash[(int) s.charAt(right)] > 0) {
-                hash[(int) s.charAt(right)]--;
-                count++;
-                right++;
-            } else {
-                hash[(int) s.charAt(left)]++;
-                count--;
-                left++;
-            }
-
-            if (count == pLen) {
-                pos.add(left);
-            }
-
-        }
-        return pos;
-    }
-
-    public List<Integer> findAnagrams2(String s, String t) {
-        List<Integer> result = new LinkedList<>();
-        if (t.length() > s.length())
+    public List<Integer> findAnagrams2(String s, String p) {
+        ArrayList<Integer> result = new ArrayList<>();
+        if (s == null || p == null)
             return result;
 
-        Map<Character, Integer> map = new HashMap<>();
-        for (char c : t.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
-        int counter = map.size();
+        int left = 0, right = 0, count = p.length();
 
-        int begin = 0, end = 0;
-        int head = 0;
-        int len = Integer.MAX_VALUE;
+        int[] map = new int[256];
 
+        char[] sc = s.toCharArray();
 
-        while (end < s.length()) {
-            char c = s.charAt(end);
-            if (map.containsKey(c)) {
-                map.put(c, map.get(c) - 1);
-                if (map.get(c) == 0)
-                    counter--;
-            }
-            end++;
+        for (char c : p.toCharArray())
+            map[c]++;
 
-            while (counter == 0) {
-                char tempc = s.charAt(begin);
-                if (map.containsKey(tempc)) {
-                    map.put(tempc, map.get(tempc) + 1);
-                    if (map.get(tempc) > 0) {
-                        counter++;
-                    }
-                }
-                if (end - begin == t.length()) {
-                    result.add(begin);
-                }
-                begin++;
-            }
-
+        while (right < s.length()) {
+            // 每一轮都会推进窗口的右边界
+            if (map[sc[right++]]-- >= 1)
+                count--;
+            // 区间 [left, right] 包含了p中所有字符
+            if (count == 0)
+                result.add(left);
+            // 经历了前面--， 如果map[leftChar]仍然>=0，说明一个符合条件的字符即将移出窗口，count++
+            // 每一轮都会滑动窗口的右边界right，但是只有当窗口大于p长度时，会移动窗口的左边界left
+            if (right - left == p.length() && map[sc[left++]]++ >= 0)
+                count++;
         }
         return result;
     }
+
 
     public static void main(String[] args) {
         String s = "abab";
         String p = "ab";
 
-        System.out.println(new FindAnagrams().findAnagrams1(s, p));
+        System.out.println(new FindAnagrams().findAnagrams2(s, p));
     }
 }
