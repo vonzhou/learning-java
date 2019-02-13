@@ -47,7 +47,7 @@
 * [IntegerCache源码阅读](src/lang/IntegerCache.md)
 * [Collections工具类源码阅读](src/collection/Collections.md)
 * [ThreadLocal](src/lang/ThreadLocal.md)
-* ArrayList
+* [ArrayList](src/collection/ArrayList.md)
 
 
 ## :hotsprings: JVM
