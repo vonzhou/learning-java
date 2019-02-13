@@ -42,11 +42,11 @@ Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不�
 
 [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
 
-[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)
 
 |Problem|Implementation|Related|
 |---|---|---|
-[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | [FindAnagrams.java](FindAnagrams.java) | 76|
+|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | [FindAnagrams.java](FindAnagrams.java) | 76|
+|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| [PermutationInString.java](PermutationInString.java) | 438|
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
