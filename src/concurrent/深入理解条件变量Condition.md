@@ -261,10 +261,17 @@ public void deallocate(ByteBuffer buffer, int size) {
 ```
 
 
-## 实现分析
+## Condition 实现分析
 
 接下来看看条件变量是怎么实现的？可重入锁关联的条件变量实现类是AQS内部类`ConditionObject`，接下来通过其中的await和signal方法的源码看看`Condition`的实现。
 
+
+![](ConditionObject.png)
+
+
+### await
+
+调用 Condition.await 方法前需要拥有锁，await 会释放锁`fullyRelease`。
 
 ```java
 public final void await() throws InterruptedException {
@@ -291,7 +298,13 @@ public final void await() throws InterruptedException {
     if (interruptMode != 0)
         reportInterruptAfterWait(interruptMode);
 }
+```
 
+### 条件队列
+
+将当前线程加入到条件等待队列。
+
+```java
 // 新增一个条件节点
 private Node addConditionWaiter() {
     Node t = lastWaiter;
@@ -310,6 +323,81 @@ private Node addConditionWaiter() {
 }
 ```
 
+### 锁释放
+
+AQS的方法。`getState()`方法获取的就是AQS里面的state变量，在`ReentrantLock`中，其实state保存的是重入的次数（参考[ReentrantLock](https://github.com/vonzhou/learning-java/blob/master/src/concurrent/ReentrantLock.md)）。
+
+
+```java
+final int fullyRelease(Node node) {
+        boolean failed = true;
+        try {
+            int savedState = getState();
+            if (release(savedState)) {
+                failed = false;
+                return savedState;
+            } else {
+                throw new IllegalMonitorStateException();
+            }
+        } finally {
+            if (failed)
+                node.waitStatus = Node.CANCELLED;
+        }
+    }
+```
+
+`ReentrantLock.Sync.tryRelease`的实现如下，可以看到不管重入了多少次都会一次性释放。
+
+```java
+protected final boolean tryRelease(int releases) {
+            int c = getState() - releases;
+            if (Thread.currentThread() != getExclusiveOwnerThread())
+                throw new IllegalMonitorStateException();
+            boolean free = false;
+            if (c == 0) {
+                free = true;
+                setExclusiveOwnerThread(null);
+            }
+            setState(c);
+            return free;
+        }
+```
+
+`fullyRelease`返回之前的重入次数，后续会用到。
+
+
+### 阻塞等待条件满足
+
+await 释放锁后进入阻塞等待状态，阻塞的条件是该节点没有在SyncQueue上：
+
+
+```java
+final boolean isOnSyncQueue(Node node) {
+        if (node.waitStatus == Node.CONDITION || node.prev == null)
+            return false;
+        if (node.next != null) // If has successor, it must be on queue
+            return true;
+        /*
+         * node.prev can be non-null, but not yet on queue because
+         * the CAS to place it on queue can fail. So we have to
+         * traverse from tail to make sure it actually made it.  It
+         * will always be near the tail in calls to this method, and
+         * unless the CAS failed (which is unlikely), it will be
+         * there, so we hardly ever traverse much.
+         */
+        return findNodeFromTail(node);
+    }
+``
+
+signal的时候该方法会返回true。
+
+### 重获锁
+
+条件满足后，需要重新获取锁，acquireQueued会调到ReentrantLock.tryAcquire，此处可以看到保存前面`savedState`的作用。
+
+### signal
+
+唤醒就是把等待队列中的第一个节点转移到同步队列。
 
 ```java
 public final void signal() {
@@ -367,6 +455,22 @@ private Node enq(final Node node) {
         }
     }
 }
+```
+
+### signalAll
+
+转移所有的等待节点。
+
+```java
+private void doSignalAll(Node first) {
+            lastWaiter = firstWaiter = null;
+            do {
+                Node next = first.nextWaiter;
+                first.nextWaiter = null;
+                transferForSignal(first);
+                first = next;
+            } while (first != null);
+        }
 ```
 
 
