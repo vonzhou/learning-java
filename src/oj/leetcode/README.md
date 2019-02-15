@@ -43,17 +43,17 @@ Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不�
 [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
 
 
-|Problem|Degree|Implementation|Related|
-|---|---|---|---|
-|[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)|M|[MultiplyStrings.java](MultiplyStrings.java) | |
-|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | |[FindAnagrams.java](FindAnagrams.java) | 76|
-|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| |[PermutationInString.java](PermutationInString.java) | 438|
-|[151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | M | [ReverseStringInWords.java](ReverseStringInWords.java) | |
-|[71. Simplify Path](https://leetcode.com/problems/simplify-path/) |M |[SimplyPath.java](SimplyPath.java) | |
-|[93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)| |[RestoreIpAddresses.java](RestoreIpAddresses.java) | |
-| | | | |
-| | | | |
-| | | | |
+|Problem|Degree|Implementation|Topic|Related|
+|---|---|---|---|---|
+|[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)|M|[MultiplyStrings.java](MultiplyStrings.java) | String||
+|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | |[FindAnagrams.java](FindAnagrams.java) | String| 76|
+|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| |[PermutationInString.java](PermutationInString.java) | String |438|
+|[151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | M | [ReverseStringInWords.java](ReverseStringInWords.java) | String| |
+|[71. Simplify Path](https://leetcode.com/problems/simplify-path/) |M |[SimplyPath.java](SimplyPath.java) |  String||
+|[93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)| |[RestoreIpAddresses.java](RestoreIpAddresses.java) |  String||
+|[15. 3Sum](https://leetcode.com/problems/3sum/) | M|[ThreeSum.java](ThreeSum.java) |Array,Binary Search ||
+| | | | ||
+| | | | ||
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
