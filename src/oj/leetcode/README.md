@@ -53,6 +53,10 @@ Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不�
 |[93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)| |[RestoreIpAddresses.java](RestoreIpAddresses.java) |  String||
 |[15. 3Sum](https://leetcode.com/problems/3sum/) | M|[ThreeSum.java](ThreeSum.java) |Array,Binary Search ||
 |[695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M| [MaxAreaOfIsland.java](MaxAreaOfIsland.java)|Array,DFS ||
+|[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) |M | | ||
+|[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) |E |[LongestContinuousIncreasingSubsequence.java](LongestContinuousIncreasingSubsequence.java) | Array||
+| | | | ||
+| | | | ||
 | | | | ||
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
