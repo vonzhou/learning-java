@@ -1,6 +1,40 @@
-
+[主页](http://vonzhou.com)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) | [GitHub](https://github.com/vonzhou)
+---
 # LeetCode In Java
 
+
+|Problem|Degree|Implementation|Topic|Related|
+|---|---|---|---|---|
+|[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)|M|[MultiplyStrings.java](MultiplyStrings.java) | String||
+|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | |[FindAnagrams.java](FindAnagrams.java) | String| 76|
+|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| |[PermutationInString.java](PermutationInString.java) | String |438|
+|[151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | M | [ReverseStringInWords.java](ReverseStringInWords.java) | String| |
+|[71. Simplify Path](https://leetcode.com/problems/simplify-path/) |M |[SimplyPath.java](SimplyPath.java) |  String||
+|[93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)| |[RestoreIpAddresses.java](RestoreIpAddresses.java) |  String||
+|[15. 3Sum](https://leetcode.com/problems/3sum/) | M|[ThreeSum.java](ThreeSum.java) |Array,Binary Search ||
+|[695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M| [MaxAreaOfIsland.java](MaxAreaOfIsland.java)|Array,DFS ||
+|[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) |M | [SearchInRotatedSortedArray.java](SearchInRotatedSortedArray.java)|Binary Search |81|
+|[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) |E |[LongestContinuousIncreasingSubsequence.java](LongestContinuousIncreasingSubsequence.java) | Array||
+|[81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) |M | | |33|
+|[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) |M |[KthLargestElementInArray](KthLargestElementInArray.java) | |703|
+|[703. Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) |E | | ||
+|[414. Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)|E||||
+|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|H|[LongestConsecutiveSequence](LongestConsecutiveSequence.java)|||
+|[60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|M||||
+|[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)|E|[Sqrt](Sqrt.java)|||
+|[21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|E|[MergeTwoSortedLists](MergeTwoSortedLists.java)|||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+
+
+
+
+[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 ☆☆☆  数组 Array
 Pascal's Triangle 就是普通的迭代，注意细节，如果让求 (a+b)^n 的系数，是不是可以想到帕斯卡三角形这里。
@@ -46,38 +80,7 @@ Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不�
 [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
 
 
-|Problem|Degree|Implementation|Topic|Related|
-|---|---|---|---|---|
-|[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)|M|[MultiplyStrings.java](MultiplyStrings.java) | String||
-|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | |[FindAnagrams.java](FindAnagrams.java) | String| 76|
-|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| |[PermutationInString.java](PermutationInString.java) | String |438|
-|[151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | M | [ReverseStringInWords.java](ReverseStringInWords.java) | String| |
-|[71. Simplify Path](https://leetcode.com/problems/simplify-path/) |M |[SimplyPath.java](SimplyPath.java) |  String||
-|[93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)| |[RestoreIpAddresses.java](RestoreIpAddresses.java) |  String||
-|[15. 3Sum](https://leetcode.com/problems/3sum/) | M|[ThreeSum.java](ThreeSum.java) |Array,Binary Search ||
-|[695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M| [MaxAreaOfIsland.java](MaxAreaOfIsland.java)|Array,DFS ||
-|[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) |M | [SearchInRotatedSortedArray.java](SearchInRotatedSortedArray.java)|Binary Search |81|
-|[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) |E |[LongestContinuousIncreasingSubsequence.java](LongestContinuousIncreasingSubsequence.java) | Array||
-|[81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) |M | | |33|
-|[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) |M |[KthLargestElementInArray](KthLargestElementInArray.java) | |703|
-|[703. Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) |E | | ||
-|[414. Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)|E||||
-|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|H|[LongestConsecutiveSequence](LongestConsecutiveSequence.java)|||
-|[60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|M||||
-|[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)|E|[Sqrt](Sqrt.java)|||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
 
-
-
-
-[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 ----------------------
 ☆☆☆  动态规划

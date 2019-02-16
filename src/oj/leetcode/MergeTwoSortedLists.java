@@ -1,4 +1,4 @@
-package oj.leetcode.sort;
+package oj.leetcode;
 
 
 /**
