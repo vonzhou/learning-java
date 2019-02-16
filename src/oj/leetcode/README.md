@@ -1,9 +1,12 @@
 
+# LeetCode In Java
+
+
 ☆☆☆  数组 Array
 Pascal's Triangle 就是普通的迭代，注意细节，如果让求 (a+b)^n 的系数，是不是可以想到帕斯卡三角形这里。
 Plus One 简单，空间申请大一格，而后处理进位，这里无需考虑溢出的问题，大数相加的问题？
 Container With Most Water 通过两指针来找到满足某条件的两个点。
-(◇)3Sum  找3数之和是0，难点在于如何消除重复的triple，不能用JCF的Set，需要进一步思考！！
+
 Unique Binary Search Trees  1-n能构成多少个BST，排列组合的思想
 Rotate Array 很常见
 
@@ -56,8 +59,23 @@ Compare Version Numbers 考虑全面，才会找到正确的思路，虽然不�
 |[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) |M | [SearchInRotatedSortedArray.java](SearchInRotatedSortedArray.java)|Binary Search |81|
 |[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) |E |[LongestContinuousIncreasingSubsequence.java](LongestContinuousIncreasingSubsequence.java) | Array||
 |[81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) |M | | |33|
-| | | | ||
-| | | | ||
+|[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) |M |[KthLargestElementInArray](KthLargestElementInArray.java) | |703|
+|[703. Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) |E | | ||
+|[414. Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)|E||||
+|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|H|[LongestConsecutiveSequence](LongestConsecutiveSequence.java)|||
+|[60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|M||||
+|[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)|E|[Sqrt](Sqrt.java)|||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+
+
+
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
