@@ -3,38 +3,58 @@
 # LeetCode In Java
 
 
-|Problem|Degree|Implementation|Topic|Related|
-|---|---|---|---|---|
-|[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)|M|[MultiplyStrings.java](MultiplyStrings.java) | String||
-|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | |[FindAnagrams.java](FindAnagrams.java) | String| 76|
-|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| |[PermutationInString.java](PermutationInString.java) | String |438|
-|[151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | M | [ReverseStringInWords.java](ReverseStringInWords.java) | String| |
-|[71. Simplify Path](https://leetcode.com/problems/simplify-path/) |M |[SimplyPath.java](SimplyPath.java) |  String||
+|Problem|Degree|Implementation|Topic|Related|Note|
+|---|---|---|---|---|---|
+|[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|M|[AddTwoNumbers](AddTwoNumbers.java)||链表,数学||
+|[15. 3Sum](https://leetcode.com/problems/3sum/) | M|[ThreeSum.java](ThreeSum.java) |Array,Binary Search |||
+|[21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|E|[MergeTwoSortedLists](MergeTwoSortedLists.java)||||
+|[23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)|H|[MergeKSortedLists](MergeKSortedLists.java)|链表,分治|||
+|[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) |M | [SearchInRotatedSortedArray.java](SearchInRotatedSortedArray.java)|Binary Search |81||
+|[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)|M|[MultiplyStrings.java](MultiplyStrings.java) | String|||
+|[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|E|[MaximumSubarray](MaximumSubarray.java)|分治,动态规划|||
+|[60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|M|||||
+|[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)|E|[Sqrt](Sqrt.java)||||
+|[71. Simplify Path](https://leetcode.com/problems/simplify-path/) |M |[SimplyPath.java](SimplyPath.java) |  String|||
+|[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)||||||
+|[81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) |M | | |33||
+|[92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|M|||206||
 |[93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)| |[RestoreIpAddresses.java](RestoreIpAddresses.java) |  String||
-|[15. 3Sum](https://leetcode.com/problems/3sum/) | M|[ThreeSum.java](ThreeSum.java) |Array,Binary Search ||
-|[695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M| [MaxAreaOfIsland.java](MaxAreaOfIsland.java)|Array,DFS ||
-|[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) |M | [SearchInRotatedSortedArray.java](SearchInRotatedSortedArray.java)|Binary Search |81|
-|[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) |E |[LongestContinuousIncreasingSubsequence.java](LongestContinuousIncreasingSubsequence.java) | Array||
-|[81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) |M | | |33|
-|[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) |M |[KthLargestElementInArray](KthLargestElementInArray.java) | |703|
-|[703. Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) |E | | ||
-|[414. Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)|E||||
-|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|H|[LongestConsecutiveSequence](LongestConsecutiveSequence.java)|||
-|[60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|M||||
-|[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)|E|[Sqrt](Sqrt.java)|||
-|[21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|E|[MergeTwoSortedLists](MergeTwoSortedLists.java)|||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
-||||||
+|[103. Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)|M|[BinaryTreeZigzagLevelOrderTraversal](BinaryTreeZigzagLevelOrderTraversal.java)|树,栈,BFS,DFS||树的遍历|
+|[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|E|[BestTimeBuyAndSellStock](BestTimeBuyAndSellStock.java)|动态规划|||
+|[122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|E|||||
+|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|H|[LongestConsecutiveSequence](LongestConsecutiveSequence.java)||||
+|[141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|E|[LinkedListCycle](LinkedListCycle.java)|链表,双指针|142|两指针问题，看是否会邂逅|
+|[142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|M|[LinkedListCycleII](LinkedListCycleII.java)|链表,双指针|141|发现规律|
+|[146. LRU Cache](https://leetcode.com/problems/lru-cache/)|H|[LRUCache](LRUCache.java)|设计, 链表|||
+|[147. Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)|M|||||
+|[148. Sort List](https://leetcode.com/problems/sort-list/)|M|[SortList](SortList.java)|链表,归并排序|147,21||
+|[151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | M | [ReverseStringInWords.java](ReverseStringInWords.java) | String| ||
+|[160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|E|[IntersectionOfTwoLinkedLists](IntersectionOfTwoLinkedLists.java)|链表|||
+|[206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|E|[ReverseLinkedList](ReverseLinkedList.java)|链表|92|
+|[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) |M |[KthLargestElementInArray](KthLargestElementInArray.java) | |703||
+|[235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)|E|||||
+|[236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|M|||235||
+|[414. Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)|E|||||
+|[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | |[FindAnagrams.java](FindAnagrams.java) | String| 76||
+|[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)| |[PermutationInString.java](PermutationInString.java) | String |438||
+|[695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M| [MaxAreaOfIsland.java](MaxAreaOfIsland.java)|Array,DFS |||
+|[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/) |E |[LongestContinuousIncreasingSubsequence.java](LongestContinuousIncreasingSubsequence.java) | Array|||
+|[703. Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) |E | | |||
+|[155. Min Stack](https://leetcode.com/problems/min-stack/)|E|[MinStack](MinStack.java),[MinStack2](MinStack2.java)||||
+|[432. All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/)|H|[AllOne](AllOne.java)|设计||mark|
 
 
 
 
-[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+## 按主题分类
+
+
+### Dynamic Programming 动态规划
+
+### Merge Sort 归并排序
+
+### Divide and Conquer 分治
+
 
 ☆☆☆  数组 Array
 Pascal's Triangle 就是普通的迭代，注意细节，如果让求 (a+b)^n 的系数，是不是可以想到帕斯卡三角形这里。
@@ -45,9 +65,6 @@ Unique Binary Search Trees  1-n能构成多少个BST，排列组合的思想
 Rotate Array 很常见
 
 -----------------------
-☆☆☆  链表 Link List
-Linked List Cycle 判断链表是否有循环，两指针问题，看是否会邂逅，
-Add Two Numbers 遍历相加，简单。
 
 ☆  栈 Stack
 Valid Parentheses 括号匹配问题，只要思路清晰，很简单。

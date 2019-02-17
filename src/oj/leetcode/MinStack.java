@@ -1,4 +1,4 @@
-package oj.leetcode.stack;
+package oj.leetcode;
 
 
 import java.util.Stack;
@@ -22,58 +22,59 @@ import java.util.Stack;
  * 
  * �����Ŀ -  Sliding Window Maximum
  */
+
+/**
+ * 使用2个stack,其中一个用来维护最小值
+ */
 public class MinStack {
-	//�����õ���Stack��Ȼ�������������ݽṹ
-	Stack<Integer> storage = new Stack<Integer>();
-	Stack<Integer> currentMinStack = new Stack<Integer>();
-	
-	public void push(int x) {
-		if(storage.isEmpty() || x <= currentMinStack.peek()){
-			//storage.push(x);
-			currentMinStack.push(x);
-		}
-		//ע���ܻ�ִ�� ���� ����Ϊ�����Ǹ�ʧ��  ���´��� Runtime Error
-		storage.push(x);
-	}
+    Stack<Integer> storage = new Stack<Integer>();
+    Stack<Integer> currentMinStack = new Stack<Integer>();
 
-	public void pop() {
-		if(storage.isEmpty())
-			return;
-		int x = storage.pop();
-		if(x == currentMinStack.peek())
-			currentMinStack.pop();
-	}
+    public void push(int x) {
+        if (storage.isEmpty() || x <= currentMinStack.peek()) {
+            currentMinStack.push(x);
+        }
+        storage.push(x);
+    }
 
-	public int top() {
-		return storage.peek();
-	}
+    public void pop() {
+        if (storage.isEmpty())
+            return;
+        int x = storage.pop();
+        if (x == currentMinStack.peek())
+            currentMinStack.pop();
+    }
 
-	public int getMin() {
-		return currentMinStack.peek();
-	}
-	
-	public static void main(String[] args) {
-		
-		MinStack ms = new MinStack();
-		ms.push(2147483646);
-		ms.push(2147483646);
-		ms.push(2147483647);
-		System.out.println(ms.top());
-		System.out.println(ms.top());
-		System.out.println(ms.getMin());
-		ms.pop();
-		System.out.println(ms.getMin());
-		ms.pop();
-		ms.push(2147483647);
-		System.out.println(ms.top());
-		System.out.println(ms.getMin());
-		ms.push(-2147483648);
-		System.out.println(ms.top());
-		System.out.println(ms.getMin());
-		System.out.println(ms.top());
-		System.out.println(ms.getMin());
-		/*
-		System.out.println(ms.getMin());
+    public int top() {
+        return storage.peek();
+    }
+
+    public int getMin() {
+        return currentMinStack.peek();
+    }
+
+    public static void main(String[] args) {
+
+        MinStack ms = new MinStack();
+        ms.push(2147483646);
+        ms.push(2147483646);
+        ms.push(2147483647);
+        System.out.println(ms.top());
+        System.out.println(ms.top());
+        System.out.println(ms.getMin());
+        ms.pop();
+        System.out.println(ms.getMin());
+        ms.pop();
+        ms.push(2147483647);
+        System.out.println(ms.top());
+        System.out.println(ms.getMin());
+        ms.push(-2147483648);
+        System.out.println(ms.top());
+        System.out.println(ms.getMin());
+        System.out.println(ms.top());
+        System.out.println(ms.getMin());
+        /*
+        System.out.println(ms.getMin());
 		System.out.println(ms.getMin());
 		ms.pop();
 		ms.pop();
@@ -84,7 +85,7 @@ public class MinStack {
 		ms.pop();
 		System.out.println(Integer.MAX_VALUE);
 		*/
-	}
+    }
 }
 /*
  �𰸽�����
