@@ -13,4 +13,24 @@ public class Util {
             System.out.println();
         }
     }
+
+    public static void showList(ListNode head) {
+        ListNode p = head;
+        while (p != null) {
+            System.out.print(p.val + " ");
+            p = p.next;
+        }
+        System.out.println();
+    }
+
+    public static ListNode createListFromArray(int[] arr) {
+        ListNode head = null;
+        for (int i = arr.length-1; i >= 0; i--) {
+            ListNode node = new ListNode(arr[i]);
+            node.next = head;
+            head = node;
+        }
+
+        return head;
+    }
 }
