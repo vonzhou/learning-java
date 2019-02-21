@@ -52,6 +52,7 @@
 
 ## :hotsprings: JVM
 
+* [JVM GC 总结](https://github.com/vonzhou/learning-java/blob/master/src/javavirtualmachine/gc/GC.md) 2019.2.21
 * [openjdk7源码阅读](https://github.com/vonzhou/openjdk7-note)
 
 ### 我觉得不错的资源
