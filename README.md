@@ -1,6 +1,7 @@
 
-# On The Road Learning Java
+[主页](https://github.com/vonzhou/Blog)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) 
 ---
+# On The Road Learning Java
 
 
 ## :point_right: 目录
@@ -24,11 +25,13 @@
 * [《Java Thread Programming》](src/javathreadprogramming)
 * 《RocketMQ实战与原理解析》
 * 《Kafka权威指南》 :+1:
+* [《Spring MVC学习指南》](https://github.com/vonzhou/SpringMVCTutorial)
 * [standalone java examples](https://github.com/vonzhou/java-examples)
 * [<Algorithms, 4e> Robert Sedgewick](http://algs4.cs.princeton.edu/home/);
 
 ## :coffee: Java语言
 
+* [为什么枚举是实现单例最好的方式？](https://github.com/vonzhou/learning-java/blob/master/src/lang/enumsingleton/Enum.md)  2019.2.14
 * [CAS 的底层实现](http://vonzhou.com/cas.html)
 * [记一次 ArrayList 线程安全问题](http://vonzhou.com/arraylist-thread-safe-case.html)
 * [如何保证ArrayList在多线程环境下的线程安全性](http://vonzhou.com/arraylist-thread-safe.html)
