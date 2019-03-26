@@ -51,6 +51,7 @@
 * [Collections工具类源码阅读](src/collection/Collections.md)
 * [ThreadLocal](src/lang/ThreadLocal.md)
 * [ArrayList](src/collection/ArrayList.md)
+* [Hashtable 和 HashMap 的对比](https://github.com/vonzhou/learning-java/blob/master/src/collection/HashtableVsHashMap.md)
 
 
 ## :hotsprings: JVM
