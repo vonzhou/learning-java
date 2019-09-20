@@ -5,7 +5,7 @@
 
 ## 序
 
-在[记一次 ArrayList 线程安全问题](http://vonzhou.com/arraylist-thread-safe-case.html)一文中说明了`ArrayList`用在多线程环境中存在问题。关键的原因就是`ArrayList`底层实现新增元素时数组索引的移动操作。
+在[记一次 ArrayList 线程安全问题](https://github.com/vonzhou/learning-java/blob/master/src/collection/arraylistthreadsafe/README.md)一文中说明了`ArrayList`用在多线程环境中存在问题。关键的原因就是`ArrayList`底层实现新增元素时数组索引的移动操作。
 
 ```java
 /**
