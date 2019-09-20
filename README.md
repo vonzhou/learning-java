@@ -33,8 +33,8 @@
 
 * [为什么枚举是实现单例最好的方式？](https://github.com/vonzhou/learning-java/blob/master/src/lang/enumsingleton/Enum.md)  2019.2.14
 * [CAS 的底层实现](http://vonzhou.com/cas.html)
-* [记一次 ArrayList 线程安全问题](http://vonzhou.com/arraylist-thread-safe-case.html)
-* [如何保证ArrayList在多线程环境下的线程安全性](http://vonzhou.com/arraylist-thread-safe.html)
+* [记一次 ArrayList 线程安全问题](https://github.com/vonzhou/learning-java/blob/master/src/collection/arraylistthreadsafe/README.md)
+* [如何保证ArrayList在多线程环境下的线程安全性](https://github.com/vonzhou/learning-java/tree/master/src/collection/arraylistthreadsafe2)
 * [synchronized的实现原理](TODO)
 * [深入理解条件变量Condition](src/concurrent/深入理解条件变量Condition.md)
 * [Hashtable 和 HashMap 的对比](src/collection/HashtableVsHashMap.md)
