@@ -32,13 +32,13 @@
 ## :coffee: Java语言
 
 * [为什么枚举是实现单例最好的方式？](https://github.com/vonzhou/learning-java/blob/master/src/lang/enumsingleton/Enum.md)  2019.2.14
-* [CAS 的底层实现](http://vonzhou.com/cas.html)
+* [CAS 的底层实现](https://github.com/vonzhou/learning-java/tree/master/src/concurrent/cas)
 * [记一次 ArrayList 线程安全问题](https://github.com/vonzhou/learning-java/blob/master/src/collection/arraylistthreadsafe/README.md)
 * [如何保证ArrayList在多线程环境下的线程安全性](https://github.com/vonzhou/learning-java/tree/master/src/collection/arraylistthreadsafe2)
 * [synchronized的实现原理](TODO)
 * [深入理解条件变量Condition](src/concurrent/深入理解条件变量Condition.md)
 * [Hashtable 和 HashMap 的对比](src/collection/HashtableVsHashMap.md)
-* [ArrayBlockingQueue与Disruptor的性能对比](http://vonzhou.com/queue-vs-disruptor.html)
+* [ArrayBlockingQueue与Disruptor的性能对比](https://github.com/vonzhou/learning-java/blob/master/src/framework/disruptor/threadpoolvsdisruptor/README.md)
 * [使用NIO实现的HTTP Server](https://github.com/vonzhou/java-nio-server)
 
 
@@ -86,8 +86,8 @@
 
 ### Disruptor
 
-* [Disruptor 快速入门](http://vonzhou.com/disruptor-hello.html)
-* [Disruptor中的事件消费模式](http://vonzhou.com/disruptor-consume-pattern.html)
+* [Disruptor 快速入门](https://github.com/vonzhou/learning-java/blob/master/src/framework/disruptor/DisruptorHello.md)
+* [Disruptor中的事件消费模式](https://github.com/vonzhou/learning-java/blob/master/src/framework/disruptor/README.md)
 
 
 ### Spring 系列
