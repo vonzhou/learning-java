@@ -1,6 +1,4 @@
 
-[主页](https://github.com/vonzhou/Blog)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) 
----
 # On The Road Learning Java
 
 
@@ -123,3 +121,8 @@
 ## Related
 
 [Scala编程之路](https://github.com/vonzhou/learning-scala)
+
+
+## 关于我
+
+![](https://github.com/vonzhou/Blog/blob/master/content/images/Wechat.jpeg)
