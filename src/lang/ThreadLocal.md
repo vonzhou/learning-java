@@ -1,9 +1,61 @@
-[主页](http://vonzhou.com)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) | [GitHub](https://github.com/vonzhou)
----
-# ThreadLocal
----
+# ThreadLocal源码再读
 
-## set
+## 序言
+
+最近在搬砖过程中遇到一个问题,背景是这样的:有些基础信息是从上下文中获取,但是当我使用线程池时,从上下文中就无法获取到相应的信息,当我跟踪原文,才猛然醒悟,Context类中存储的底层使用的是 ThreadLocal.
+
+那么底层到底是怎么实现的呢?之前也阅读过该类的源码,此次再做梳理以温故.
+
+我们先从一个简单直观例子入手.
+
+## ThreadLocal 示例
+
+子线程中是否可以获得父线程设置的ThreadLocal变量? Demo验证下:
+
+```java
+public class ThreadLocalInheritDemo {
+    //    private ThreadLocal<String> threadLocal = new InheritableThreadLocal<>();
+    private ThreadLocal<String> threadLocal = new ThreadLocal<>();
+
+    public void test() throws InterruptedException {
+        threadLocal.set("parent");
+
+        // 开启一个子线程
+        Thread childThread = new Thread(() -> {
+            System.out.println(Thread.currentThread() + ": " + threadLocal.get());
+            threadLocal.set("child");
+            System.out.println(Thread.currentThread() + ": " + threadLocal.get());
+        });
+
+        childThread.start();
+
+        childThread.join();
+
+        System.out.println(Thread.currentThread() + ": " + threadLocal.get());
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        new ThreadLocalInheritDemo().test();
+    }
+}
+```
+
+执行结果是:
+
+```plaintext
+Thread[Thread-0,5,main]: null
+Thread[Thread-0,5,main]: child
+Thread[main,5,main]: parent
+```
+
+可以看到main线程设置的ThreadLocal,子线程没有获取到, 二者的ThreadLocal是相互独立的.接下来我们看看ThreadLocal的源码.
+
+## ThreadLocal 源码分析
+
+ThreadLocal 是JDK 1.2引入的,作者是大牛Josh Bloch 和 Doug Lea.从我们使用的API:set和get入手进行分析.
+
+
+### set 方法
 
 ```java
     public void set(T value) {
@@ -33,67 +85,11 @@ Thread中的threadLocals就用来保存这些线程私有的数据.
 ThreadLocal.ThreadLocalMap threadLocals = null;
 ```
 
+**ThreadLocalMap 内部是什么样的结构呢?**
 
-
-## get
-
-```java
-public T get() {
-    Thread t = Thread.currentThread();
-    ThreadLocalMap map = getMap(t);
-    if (map != null) {
-        ThreadLocalMap.Entry e = map.getEntry(this);
-        if (e != null) {
-            @SuppressWarnings("unchecked")
-            T result = (T)e.value;
-            return result;
-        }
-    }
-    return setInitialValue();
-}
-
-ThreadLocalMap getMap(Thread t) {
-    return t.threadLocals;
-}
-
-private T setInitialValue() {
-    T value = initialValue();
-    Thread t = Thread.currentThread();
-    // 又是double check
-    ThreadLocalMap map = getMap(t);
-    if (map != null)
-        map.set(this, value);
-    else
-        createMap(t, value);
-    return value;
-}
-```
-
-如果当前线程的ThreadLocalMap还不存在，就会调用setInitialValue方法进行创建,默认值由`initialValue`方法得到,该方法:
-
-```java
-protected T initialValue() {
-        return null;
-    }
-```
-
-所以我们一般在使用ThreadLocal的时候,创建一个其子类并重写该方法,类似:
-
-```java
-public static ThreadLocal<Random> randomThreadLocal = new ThreadLocal<Random>() {
-        protected Random initialValue() {
-            return new Random(123);
-        }
-    };
-```
-
-## ThreadLocalMap
-
-里面的方法都是private的
-
-Entry继承自WeakReference(TODO)，当内存紧张时可以对ThreadLocal对象进行回收
-
-负载因子是2/3,而不是HashMap里面的0.75.
+* 首先我们可以看到里面的方法都是private的.
+* 内部类Entry继承自WeakReference，当内存紧张时可以对ThreadLocal对象进行回收.
+* 负载因子是2/3,而不是HashMap里面的0.75.
 
 
 ```java
@@ -543,7 +539,60 @@ public void clear() {
     }
 ```
 
-## Java 8
+
+### get 方法
+
+```java
+public T get() {
+    Thread t = Thread.currentThread();
+    ThreadLocalMap map = getMap(t);
+    if (map != null) {
+        ThreadLocalMap.Entry e = map.getEntry(this);
+        if (e != null) {
+            @SuppressWarnings("unchecked")
+            T result = (T)e.value;
+            return result;
+        }
+    }
+    return setInitialValue();
+}
+
+ThreadLocalMap getMap(Thread t) {
+    return t.threadLocals;
+}
+
+private T setInitialValue() {
+    T value = initialValue();
+    Thread t = Thread.currentThread();
+    // 又是double check
+    ThreadLocalMap map = getMap(t);
+    if (map != null)
+        map.set(this, value);
+    else
+        createMap(t, value);
+    return value;
+}
+```
+
+如果当前线程的ThreadLocalMap还不存在，就会调用setInitialValue方法进行创建,默认值由`initialValue`方法得到,该方法:
+
+```java
+protected T initialValue() {
+        return null;
+    }
+```
+
+所以我们一般在使用ThreadLocal的时候,创建一个其子类并重写该方法,类似:
+
+```java
+public static ThreadLocal<Random> randomThreadLocal = new ThreadLocal<Random>() {
+        protected Random initialValue() {
+            return new Random(123);
+        }
+    };
+```
+
+## Java 8中ThreadLocal的变化
 
 Java 8提供了Lambda支持,使得可以这样初始化:
 
@@ -564,63 +613,15 @@ static final class SuppliedThreadLocal<T> extends ThreadLocal<T> {
 }
 ```
 
-
-
-## 内存泄漏问题?
-
-TODO
-
 ## ThreadLocal继承问题
 
-子线程中是否可以获得父线程设置的ThreadLocal变量? Demo验证下:
+在前面的示例中我们可以看到main线程设置的ThreadLocal子线程没有获取到, 如果需要的话,其实可以使用`InheritableThreadLocal`.
 
-```java
-public class ThreadLocalInheritDemo {
-    //    private ThreadLocal<String> threadLocal = new InheritableThreadLocal<>();
-    private ThreadLocal<String> threadLocal = new ThreadLocal<>();
-
-    public void test() throws InterruptedException {
-        threadLocal.set("parent");
-
-        // 开启一个子线程
-        Thread childThread = new Thread(() -> {
-            System.out.println(Thread.currentThread() + ": " + threadLocal.get());
-            threadLocal.set("child");
-            System.out.println(Thread.currentThread() + ": " + threadLocal.get());
-        });
-
-        childThread.start();
-
-        childThread.join();
-
-        System.out.println(Thread.currentThread() + ": " + threadLocal.get());
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        new ThreadLocalInheritDemo().test();
-    }
-}
-```
-
-执行结果是:
-
-```plaintext
-Thread[Thread-0,5,main]: null
-Thread[Thread-0,5,main]: child
-Thread[main,5,main]: parent
-```
-
-可以看到main线程设置的ThreadLocal,子线程没有获取到, 二者的ThreadLocal是相互独立的.
-
-可以使用`InheritableThreadLocal`, `InheritableThreadLocal`在子线程创建的时候将父线程的变量(浅)拷贝到自身中。看Thread的init方法:
+`InheritableThreadLocal`在子线程创建的时候将父线程的变量(浅)拷贝到自身中。看Thread的init方法:
 
 ```java
 private void init(ThreadGroup g, Runnable target, String name,
                       long stackSize, AccessControlContext acc) {
-        if (name == null) {
-            throw new NullPointerException("name cannot be null");
-        }
-
         this.name = name.toCharArray();
 
         Thread parent = currentThread();
@@ -687,5 +688,7 @@ ThreadLocal.ThreadLocalMap threadLocals = null;
 ThreadLocal.ThreadLocalMap inheritableThreadLocals = null;
 ```
 
-使用`InheritableThreadLocal`只会在子线程初始化时从父线程拷贝一次数据,在线程池的场景中,线程池中的线程会从不同的上级线程中接受任务执行,这个时候如果想要线程池也能拿到提交线程的私有数据,可以看下阿里的transmittable-thread-local(TODO).
+使用`InheritableThreadLocal`只会在子线程初始化时从父线程拷贝一次数据,在线程池的场景中,线程池中的线程会从不同的上级线程中接受任务执行,这个时候如果想要线程池也能拿到提交线程的私有数据,可以看下阿里的transmittable-thread-local.
+
+
 
