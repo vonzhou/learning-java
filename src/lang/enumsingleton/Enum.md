@@ -1,5 +1,3 @@
-[主页](http://vonzhou.com)  | [读书](https://github.com/vonzhou/readings)  | [知乎](https://www.zhihu.com/people/vonzhou) | [GitHub](https://github.com/vonzhou)
----
 # 为什么枚举是实现单例最好的方式？
 
 提到单例模式（Singleton Pattern），都能说出一二，但是没那么简单。
